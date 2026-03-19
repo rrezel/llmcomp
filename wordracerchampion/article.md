@@ -107,4 +107,4 @@ The posts in my feed will keep going up. "I asked AI to build me an app and it w
 
 ---
 
-*The server code, prompt, and all four generated clients are available in the repository linked below. All runs were conducted on the same machine with all four bots connecting simultaneously to `localhost:7474`. No bot was given the other bots' code or scores between rounds.*
+*The server code, prompt, and all four generated clients are available in the repository [here](https://github.com/rrezel/llmcomp/tree/main). All runs were conducted on the same machine with all four bots connecting simultaneously to `localhost:7474`. No bot was given the other bots' code or scores between rounds.*
