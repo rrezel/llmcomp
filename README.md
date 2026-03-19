@@ -15,8 +15,8 @@ This project aims to benchmark various Large Language Models (LLMs) by giving th
 **Results:**
 - **Grok:** Failed to produce valid C code.
 - **ChatGPT:** Produced valid C code, but the executable resulted in a segmentation fault.
-- **Gemini (1.5 Pro):** Code compiled and ran, but produced the wrong output.
-- **Claude (3.5 Sonnet):** Code compiled and ran, but produced the wrong output.
+- **Gemini (3.1 Pro):** Code compiled and ran, but produced the wrong output.
+- **Claude (Opus 4.6):** Code compiled and ran, but produced the wrong output.
 
 For more details on this test, see the [article](sovietpost/article.md) and the [prompt](sovietpost/prompt.md).
 
