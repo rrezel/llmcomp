@@ -22,13 +22,14 @@ For more details on this test, see the [article](sovietpost/article.md) and the 
 
 ### 2. Word Racer Champion (`wordracerchampion/`)
 
-**Task:** Write a Python 3.10 client that connects to a TCP server, receives a 15×15 letter grid, and races to find and submit valid dictionary words traced adjacently on the grid. Scoring: `letters − 6`. Four bots compete simultaneously in a ten-second round.
+**Task:** Write a Python 3.10 client that connects to a TCP server, receives a 15×15 letter grid, and races to find and submit valid dictionary words traced adjacently on the grid. Scoring: `letters − 6`. Five bots compete simultaneously in a ten-second round, five rounds total.
 
 **Results:**
-- **ChatGPT (GPT 5.3):** Submitted thousands of valid but unprofitable short words, scoring −74,383 cumulative across three rounds.
-- **Grok (Expert 4.2):** Same short-word mistake but throttled by synchronous I/O, scoring −1,520 cumulative.
-- **Gemini (Pro 3.1):** Too slow to claim any words before Claude, scoring 0 in all three rounds.
-- **Claude (Opus 4.6):** Only bot to filter for profitable word lengths (7+), with a pipelined three-thread architecture. Scored +854 cumulative, winning all three rounds.
+- **Claude (Opus 4.6):** Scored +1,251 cumulative, winning all five rounds. Only bot to filter for profitable word lengths (7+), with a pipelined three-thread architecture.
+- **MiMo:** Scored +78 cumulative. Array-based trie with length-sorted output — correct strategy, but batch-then-submit was too slow to beat Claude's streaming pipeline.
+- **Gemini (Pro 3.1):** Scored 0 in all five rounds. Too slow to claim any words before Claude.
+- **Grok (Expert 4.2):** Scored −2,431 cumulative. Submitted all words including unprofitable short ones, throttled by synchronous I/O.
+- **ChatGPT (GPT 5.3):** Scored −118,969 cumulative. Same short-word mistake as Grok but with async I/O, flooding the server with thousands of negative-scoring submissions per round.
 
 For more details on this test, see the [article](wordracerchampion/article.md) and the [prompt](wordracerchampion/prompt.md).
 
@@ -44,12 +45,43 @@ For more details on this test, see the [article](wordracerchampion/article.md) a
 
 For more details on this test, see the [article](growingwordladder/article.md) and the [prompt](growingwordladder/prompt.md).
 
-## Tally
+### 4. The Amazing Teleportal Maze (`amazed/`)
 
-| Model | Soviet Post | Word Racer | Word Ladder | Total |
-|---|---|---|---|---|
-| **Claude (Opus 4.6)** | Wrong output | 1st (+854) | 1st (100/100 wins) | **2 wins** |
-| **Gemini (Pro 3.1)** | Wrong output | 4th (0) | 3rd (0 wins) | **0 wins** |
-| **ChatGPT (GPT 5.3)** | Segfault | 4th (−74,383) | 4th (0 wins) | **0 wins** |
-| **Grok (Expert 4.2)** | Invalid code | 3rd (−1,520) | 2nd (0 wins) | **0 wins** |
+**Task:** Write a Python 3.10 client to navigate a 2D ASCII maze with teleportals under foggy conditions. No map — bots must explore, remember what they've seen, and find the exit in as few steps as possible. 100 rounds of increasing maze size. Exceeding 500 moves or timing out = elimination.
+
+**Results:**
+- **Claude (Opus 4.6):** Won 80 of 100 rounds. BFS exploration biased toward exit corner, immediate portal link resolution from TELEPORT coordinates.
+- **Grok (Expert 4.2):** Won 20 of 100 rounds. BFS exploration without directional bias, portal detection by letter matching only.
+- **Gemini (Pro 3.1):** Eliminated round 5. Protocol desynchronization on larger mazes.
+- **ChatGPT (GPT 5.3):** Eliminated round 8. Move timeout on larger mazes.
+- **MiMo:** Eliminated round 1. `.strip()` destroyed spaces in the 5×5 view.
+
+For more details on this test, see the [article](amazed/article.md) and the [prompt](amazed/prompt.md).
+
+### 5. The Subway Speedrun (`subwayspeedrun/`)
+
+**Task:** Write a Python 3.10 client that solves subway routing optimization: given a network with schedules, transfer hubs, and variable travel times, find the fastest route visiting every station. 10 rounds of increasing difficulty (3-11 lines, 12-119 stations). NP-hard combinatorial optimization with real timetable constraints.
+
+**Results:**
+- **Claude (Opus 4.6):** 22 points (1st). Won 8 of 10 rounds with Dijkstra + permutation search + timetable simulation. Failed on 8+ line networks (permutation explosion).
+- **Gemini (Pro 3.1):** 6 points (2nd). Won rounds 1-2 with the fastest times, then crashed permanently due to `heapq` tuple comparison bug.
+- **Nemotron:** 6 points (3rd). Dijkstra with schedule awareness, but couldn't scale past 55 stations.
+- **Grok (Expert 4.2):** 4 points (4th). Instant DFS with no schedule modeling. Produced invalid routes on larger networks.
+- **ChatGPT (GPT 5.3):** 0 points. Beam search crashed every round — same `heapq` tuple comparison bug as Gemini.
+- **MiMo:** 0 points. Hardcoded wrong transfer stations in every route.
+
+For more details on this test, see the [article](subwayspeedrun/article.md) and the [prompt](subwayspeedrun/prompt.md).
+
+## Medal Tally
+
+| Model | Soviet Post | Word Racer | Word Ladder | Maze | Subway | Gold | Silver | Bronze |
+|---|---|---|---|---|---|---|---|---|
+| **Claude (Opus 4.6)** | DQ | Gold | Gold | Gold | Gold | **4** | 0 | 0 |
+| **Grok (Expert 4.2)** | DQ | — | Silver | Silver | — | 0 | **2** | 0 |
+| **Gemini (Pro 3.1)** | DQ | — | Bronze | DQ | Silver | 0 | **1** | **1** |
+| **MiMo** | DNP | Silver | DNP | DQ | DQ | 0 | **1** | 0 |
+| **Nemotron** | DNP | DNP | DNP | DNP | Bronze | 0 | 0 | **1** |
+| **ChatGPT (GPT 5.3)** | DQ | — | — | DQ | DQ | 0 | 0 | 0 |
+
+*DQ = disqualified (crashed, invalid output, or eliminated early). DNP = did not participate. — = finished but did not medal. Soviet Post: no model produced correct output — all DQ. Subway: Gemini and Nemotron tied on 6 points, but Gemini won 2 rounds vs 0, taking silver.*
 

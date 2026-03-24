@@ -1,0 +1,2182 @@
+--- ROUND 1: 3 lines, 12 stations, 2 transfers ---
+NETWORK:
+{
+  "lines": [
+    {
+      "id": "A",
+      "stations": [
+        "A0",
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "segments": [
+        14,
+        15,
+        10
+      ],
+      "interval": 25,
+      "start_time": "06:00",
+      "end_time": "21:15"
+    },
+    {
+      "id": "B",
+      "stations": [
+        "B0",
+        "B1",
+        "B2",
+        "B3"
+      ],
+      "segments": [
+        3,
+        12,
+        10
+      ],
+      "interval": 15,
+      "start_time": "05:45",
+      "end_time": "21:30"
+    },
+    {
+      "id": "C",
+      "stations": [
+        "C0",
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "segments": [
+        4,
+        7,
+        6
+      ],
+      "interval": 12,
+      "start_time": "05:00",
+      "end_time": "21:30"
+    }
+  ],
+  "transfers": [
+    [
+      "C2",
+      "B1"
+    ],
+    [
+      "B2",
+      "A2"
+    ]
+  ]
+}
+
+  gemini_speedrun_bot  |  142min |    55001ms | +3 | total: 3
+  claude_bot           |  157min |       73ms | +2 | total: 2
+  nemotron_bot         |  178min |        5ms | +1 | total: 1
+  grok_bot             |  249min |        2ms | +0 | total: 0
+  mimo_bot             | INVALID: No transfer connection between B2 and A3 |       29ms | +0 | total: 0
+  gpt54_bot            | DISCONNECTED                   |       78ms | +0 | total: 0
+
+SOLUTIONS:
+  claude_bot (VALID, 157min):
+    start_time: 07:36
+    route (16 stations): ["C0", "C1", "C2", "C3", "C2", "B1", "B0", "B1", "B2", "B3", "B2", "A2", "A3", "A2", "A1", "A0"]
+  gemini_speedrun_bot (VALID, 142min):
+    start_time: 06:00
+    route (17 stations): ["A0", "A1", "A2", "A3", "A2", "B2", "B3", "B2", "B1", "B0", "B1", "C2", "C1", "C0", "C1", "C2", "C3"]
+  grok_bot (VALID, 249min):
+    start_time: 05:00
+    route (23 stations): ["A0", "A1", "A2", "A3", "A2", "B2", "B1", "B0", "B1", "C2", "C1", "C0", "C1", "C2", "C3", "C2", "B1", "B2", "B3", "B2", "A2", "A1", "A0"]
+  mimo_bot (INVALID: No transfer connection between B2 and A3):
+    start_time: 06:00
+    route (5 stations): ["A0", "A1", "A2", "B2", "A3"]
+  nemotron_bot (VALID, 178min):
+    start_time: 06:00
+    route (21 stations): ["A1", "A0", "A1", "A2", "B2", "A2", "A3", "A2", "B2", "B3", "B2", "B1", "C2", "B1", "B0", "B1", "C2", "C3", "C2", "C1", "C0"]
+
+--- ROUND 2: 4 lines, 19 stations, 5 transfers ---
+NETWORK:
+{
+  "lines": [
+    {
+      "id": "A",
+      "stations": [
+        "A0",
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "segments": [
+        10,
+        3,
+        3
+      ],
+      "interval": 25,
+      "start_time": "05:30",
+      "end_time": "22:45"
+    },
+    {
+      "id": "B",
+      "stations": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "segments": [
+        8,
+        4,
+        11,
+        5
+      ],
+      "interval": 10,
+      "start_time": "05:00",
+      "end_time": "21:15"
+    },
+    {
+      "id": "C",
+      "stations": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "segments": [
+        15,
+        11,
+        3,
+        6
+      ],
+      "interval": 30,
+      "start_time": "05:30",
+      "end_time": "23:15"
+    },
+    {
+      "id": "D",
+      "stations": [
+        "D0",
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "segments": [
+        9,
+        10,
+        10,
+        4
+      ],
+      "interval": 12,
+      "start_time": "07:00",
+      "end_time": "22:00"
+    }
+  ],
+  "transfers": [
+    [
+      "C1",
+      "A2"
+    ],
+    [
+      "A1",
+      "B1"
+    ],
+    [
+      "B3",
+      "D1"
+    ],
+    [
+      "B2",
+      "C3"
+    ],
+    [
+      "D2",
+      "C2"
+    ]
+  ]
+}
+
+  gemini_speedrun_bot  |  216min |    55001ms | +3 | total: 6
+  claude_bot           |  225min |      459ms | +2 | total: 4
+  nemotron_bot         |  305min |        6ms | +1 | total: 2
+  grok_bot             |  321min |        3ms | +0 | total: 0
+  gpt54_bot            | DISCONNECTED                   |        2ms | +0 | total: 0
+  mimo_bot             | INVALID: No transfer connection between B1 and A2 |       50ms | +0 | total: 0
+
+SOLUTIONS:
+  claude_bot (VALID, 225min):
+    start_time: 08:25
+    route (28 stations): ["A0", "A1", "A2", "A3", "A2", "A1", "B1", "B0", "B1", "B2", "B3", "B4", "B3", "D1", "D0", "D1", "D2", "D3", "D4", "D3", "D2", "C2", "C3", "C4", "C3", "C2", "C1", "C0"]
+  gemini_speedrun_bot (VALID, 216min):
+    start_time: 05:30
+    route (28 stations): ["C0", "C1", "C2", "C3", "C4", "C3", "B2", "B1", "B0", "B1", "A1", "A0", "A1", "A2", "A3", "A2", "A1", "B1", "B2", "B3", "B4", "B3", "D1", "D0", "D1", "D2", "D3", "D4"]
+  grok_bot (VALID, 321min):
+    start_time: 05:00
+    route (37 stations): ["A0", "A1", "A2", "A3", "A2", "C1", "C0", "C1", "C2", "C3", "C4", "C3", "B2", "B1", "B0", "B1", "B2", "B3", "B4", "B3", "D1", "D0", "D1", "D2", "D3", "D4", "D3", "D2", "D1", "B3", "B2", "C3", "C2", "C1", "A2", "A1", "A0"]
+  mimo_bot (INVALID: No transfer connection between B1 and A2):
+    start_time: 06:00
+    route (6 stations): ["A0", "A1", "B1", "A2", "C1", "A3"]
+  nemotron_bot (VALID, 305min):
+    start_time: 06:00
+    route (42 stations): ["B0", "B1", "A1", "A2", "C1", "A2", "A3", "A2", "A1", "B1", "B2", "C3", "C2", "D2", "C2", "C3", "C4", "C3", "B2", "B3", "D1", "B3", "B4", "B3", "D1", "D0", "D1", "D2", "D3", "D4", "D3", "D2", "C2", "C3", "B2", "B1", "A1", "A0", "A1", "A2", "C1", "C0"]
+
+--- ROUND 3: 3 lines, 18 stations, 5 transfers ---
+NETWORK:
+{
+  "lines": [
+    {
+      "id": "A",
+      "stations": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "segments": [
+        13,
+        9,
+        9,
+        13,
+        4,
+        6
+      ],
+      "interval": 15,
+      "start_time": "06:00",
+      "end_time": "23:45"
+    },
+    {
+      "id": "B",
+      "stations": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "segments": [
+        15,
+        13,
+        15,
+        3
+      ],
+      "interval": 12,
+      "start_time": "06:15",
+      "end_time": "22:45"
+    },
+    {
+      "id": "C",
+      "stations": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "segments": [
+        9,
+        15,
+        3,
+        9,
+        9
+      ],
+      "interval": 20,
+      "start_time": "06:30",
+      "end_time": "21:45"
+    }
+  ],
+  "transfers": [
+    [
+      "B2",
+      "A5"
+    ],
+    [
+      "A3",
+      "C1"
+    ],
+    [
+      "C3",
+      "B1"
+    ],
+    [
+      "C2",
+      "A1"
+    ],
+    [
+      "B3",
+      "C4"
+    ]
+  ]
+}
+
+  claude_bot           |  225min |      136ms | +3 | total: 7
+  nemotron_bot         |  313min |        5ms | +2 | total: 4
+  grok_bot             |  324min |        3ms | +1 | total: 1
+  gpt54_bot            | DISCONNECTED                   |        4ms | +0 | total: 0
+  gemini_speedrun_bot  | DISCONNECTED                   |       11ms | +0 | total: 6
+  mimo_bot             | INVALID: Unvisited stations: ['A0', 'A2', 'A4', 'A5', 'A6', 'B0', 'B2', 'B4'] |       47ms | +0 | total: 0
+
+SOLUTIONS:
+  claude_bot (VALID, 225min):
+    start_time: 06:30
+    route (24 stations): ["C0", "C1", "A3", "A4", "A5", "A6", "A5", "A4", "A3", "A2", "A1", "A0", "A1", "C2", "C3", "B1", "B0", "B1", "B2", "B3", "B4", "B3", "C4", "C5"]
+  grok_bot (VALID, 324min):
+    start_time: 06:00
+    route (35 stations): ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A5", "B2", "B1", "B0", "B1", "C3", "C2", "C1", "C0", "C1", "C2", "C3", "C4", "C5", "C4", "B3", "B4", "B3", "C4", "C3", "B1", "B2", "A5", "A4", "A3", "A2", "A1", "A0"]
+  mimo_bot (INVALID: Unvisited stations: ['A0', 'A2', 'A4', 'A5', 'A6', 'B0', 'B2', 'B4']):
+    start_time: 07:00
+    route (14 stations): ["C0", "C1", "A3", "C1", "C2", "A1", "C2", "C3", "B1", "C3", "C4", "B3", "C4", "C5"]
+  nemotron_bot (VALID, 313min):
+    start_time: 06:00
+    route (38 stations): ["A1", "C2", "C3", "B1", "C3", "C4", "B3", "C4", "B3", "B4", "B3", "C4", "C5", "C4", "B3", "B2", "A5", "A4", "A5", "A6", "A5", "A4", "A3", "C1", "A3", "A2", "A3", "C1", "C0", "C1", "C2", "A1", "A0", "A1", "C2", "C3", "B1", "B0"]
+
+--- ROUND 4: 5 lines, 36 stations, 9 transfers ---
+NETWORK:
+{
+  "lines": [
+    {
+      "id": "A",
+      "stations": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "segments": [
+        6,
+        7,
+        5,
+        9,
+        9,
+        9
+      ],
+      "interval": 25,
+      "start_time": "05:45",
+      "end_time": "21:15"
+    },
+    {
+      "id": "B",
+      "stations": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5"
+      ],
+      "segments": [
+        3,
+        4,
+        5,
+        14,
+        4
+      ],
+      "interval": 30,
+      "start_time": "05:00",
+      "end_time": "23:30"
+    },
+    {
+      "id": "C",
+      "stations": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8"
+      ],
+      "segments": [
+        6,
+        4,
+        8,
+        10,
+        12,
+        4,
+        10,
+        4
+      ],
+      "interval": 8,
+      "start_time": "07:00",
+      "end_time": "22:00"
+    },
+    {
+      "id": "D",
+      "stations": [
+        "D0",
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "D8"
+      ],
+      "segments": [
+        4,
+        14,
+        15,
+        6,
+        7,
+        6,
+        13,
+        9
+      ],
+      "interval": 20,
+      "start_time": "07:30",
+      "end_time": "22:00"
+    },
+    {
+      "id": "E",
+      "stations": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "segments": [
+        13,
+        15,
+        15,
+        14
+      ],
+      "interval": 12,
+      "start_time": "06:30",
+      "end_time": "21:00"
+    }
+  ],
+  "transfers": [
+    [
+      "B3",
+      "A1"
+    ],
+    [
+      "A2",
+      "C7"
+    ],
+    [
+      "C4",
+      "E3"
+    ],
+    [
+      "E2",
+      "D1"
+    ],
+    [
+      "D4",
+      "E1"
+    ],
+    [
+      "A4",
+      "D6"
+    ],
+    [
+      "D3",
+      "A5"
+    ],
+    [
+      "C6",
+      "A3"
+    ],
+    [
+      "D2",
+      "C5"
+    ]
+  ]
+}
+
+  claude_bot           |  422min |      838ms | +3 | total: 10
+  nemotron_bot         |  630min |       30ms | +2 | total: 6
+  grok_bot             |  715min |        4ms | +1 | total: 2
+  gemini_speedrun_bot  | DISCONNECTED                   |        2ms | +0 | total: 6
+  gpt54_bot            | DISCONNECTED                   |        3ms | +0 | total: 0
+  mimo_bot             | INVALID: No transfer connection between B3 and A2 |       92ms | +0 | total: 0
+
+SOLUTIONS:
+  claude_bot (VALID, 422min):
+    start_time: 09:16
+    route (52 stations): ["C0", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C7", "A2", "A1", "B3", "B2", "B1", "B0", "B1", "B2", "B3", "B4", "B5", "B4", "B3", "A1", "A0", "A1", "A2", "A3", "A4", "A5", "A6", "A5", "D3", "D4", "E1", "E0", "E1", "E2", "E3", "E4", "E3", "E2", "D1", "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8"]
+  grok_bot (VALID, 715min):
+    start_time: 05:00
+    route (71 stations): ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A5", "D3", "D2", "D1", "D0", "D1", "E2", "E1", "E0", "E1", "D4", "D5", "D6", "D7", "D8", "D7", "D6", "D5", "D4", "E1", "E2", "E3", "E4", "E3", "C4", "C3", "C2", "C1", "C0", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C7", "C6", "C5", "C4", "E3", "E2", "D1", "D2", "D3", "A5", "A4", "A3", "A2", "A1", "B3", "B2", "B1", "B0", "B1", "B2", "B3", "B4", "B5", "B4", "B3", "A1", "A0"]
+  mimo_bot (INVALID: No transfer connection between B3 and A2):
+    start_time: 06:00
+    route (12 stations): ["A0", "A1", "B3", "A2", "C7", "A3", "C6", "A4", "D6", "A5", "D3", "A6"]
+  nemotron_bot (VALID, 630min):
+    start_time: 06:00
+    route (74 stations): ["C8", "C7", "A2", "C7", "A2", "A3", "C6", "C5", "D2", "C5", "C4", "E3", "C4", "C3", "C2", "C1", "C0", "C1", "C2", "C3", "C4", "E3", "E4", "E3", "E2", "D1", "D0", "D1", "E2", "E1", "D4", "E1", "D4", "D3", "A5", "A4", "D6", "A4", "D6", "D5", "D6", "D7", "D8", "D7", "D6", "A4", "A5", "A6", "A5", "D3", "D4", "E1", "E0", "E1", "D4", "D5", "D6", "A4", "A3", "A2", "A1", "B3", "B2", "B1", "B0", "B1", "B2", "B3", "A1", "A0", "A1", "B3", "B4", "B5"]
+
+--- ROUND 5: 7 lines, 58 stations, 10 transfers ---
+NETWORK:
+{
+  "lines": [
+    {
+      "id": "A",
+      "stations": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10"
+      ],
+      "segments": [
+        3,
+        7,
+        5,
+        9,
+        11,
+        4,
+        15,
+        11,
+        11,
+        7
+      ],
+      "interval": 25,
+      "start_time": "05:15",
+      "end_time": "21:00"
+    },
+    {
+      "id": "B",
+      "stations": [
+        "B0",
+        "B1",
+        "B2",
+        "B3"
+      ],
+      "segments": [
+        15,
+        15,
+        13
+      ],
+      "interval": 10,
+      "start_time": "06:30",
+      "end_time": "21:30"
+    },
+    {
+      "id": "C",
+      "stations": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8"
+      ],
+      "segments": [
+        11,
+        4,
+        10,
+        6,
+        7,
+        6,
+        9,
+        14
+      ],
+      "interval": 8,
+      "start_time": "05:15",
+      "end_time": "23:30"
+    },
+    {
+      "id": "D",
+      "stations": [
+        "D0",
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "D8"
+      ],
+      "segments": [
+        14,
+        7,
+        9,
+        12,
+        5,
+        6,
+        14,
+        15
+      ],
+      "interval": 10,
+      "start_time": "05:00",
+      "end_time": "23:30"
+    },
+    {
+      "id": "E",
+      "stations": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "segments": [
+        14,
+        14,
+        9,
+        13,
+        10,
+        11
+      ],
+      "interval": 30,
+      "start_time": "06:30",
+      "end_time": "21:00"
+    },
+    {
+      "id": "F",
+      "stations": [
+        "F0",
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9",
+        "F10"
+      ],
+      "segments": [
+        8,
+        13,
+        4,
+        12,
+        13,
+        7,
+        14,
+        11,
+        4,
+        10
+      ],
+      "interval": 30,
+      "start_time": "06:15",
+      "end_time": "23:00"
+    },
+    {
+      "id": "G",
+      "stations": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6"
+      ],
+      "segments": [
+        7,
+        15,
+        11,
+        6,
+        12,
+        3
+      ],
+      "interval": 30,
+      "start_time": "06:30",
+      "end_time": "22:00"
+    }
+  ],
+  "transfers": [
+    [
+      "F1",
+      "D2"
+    ],
+    [
+      "D4",
+      "C5"
+    ],
+    [
+      "C2",
+      "B2"
+    ],
+    [
+      "B1",
+      "E4"
+    ],
+    [
+      "E3",
+      "A8"
+    ],
+    [
+      "A1",
+      "G4"
+    ],
+    [
+      "G2",
+      "A5"
+    ],
+    [
+      "D6",
+      "A9"
+    ],
+    [
+      "F9",
+      "A4"
+    ],
+    [
+      "A3",
+      "D3"
+    ]
+  ]
+}
+
+  claude_bot           |  812min |    17575ms | +3 | total: 13
+  gemini_speedrun_bot  | DISCONNECTED                   |        2ms | +0 | total: 6
+  gpt54_bot            | DISCONNECTED                   |        2ms | +0 | total: 0
+  grok_bot             | INVALID: No train available at A5 on line A direction rev after 22:20 |        4ms | +0 | total: 2
+  nemotron_bot         | INVALID: No train available at E4 on line E direction rev after 21:38 |       46ms | +0 | total: 6
+  mimo_bot             | INVALID: No transfer connection between G4 and A2 |      198ms | +0 | total: 0
+
+SOLUTIONS:
+  claude_bot (VALID, 812min):
+    start_time: 05:50
+    route (82 stations): ["D8", "D7", "D6", "D5", "D4", "D3", "D2", "D1", "D0", "D1", "D2", "F1", "F0", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F9", "A4", "A5", "G2", "G1", "G0", "G1", "G2", "G3", "G4", "G5", "G6", "G5", "G4", "A1", "A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A9", "D6", "D5", "D4", "C5", "C6", "C7", "C8", "C7", "C6", "C5", "C4", "C3", "C2", "C1", "C0", "C1", "C2", "B2", "B3", "B2", "B1", "B0", "B1", "E4", "E5", "E6", "E5", "E4", "E3", "E2", "E1", "E0"]
+  grok_bot (INVALID: No train available at A5 on line A direction rev after 22:20):
+    start_time: 05:00
+    route (115 stations): ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A9", "D6", "D5", "D4", "D3", "D2", "D1", "D0", "D1", "D2", "F1", "F0", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F9", "F8", "F7", "F6", "F5", "F4", "F3", "F2", "F1", "D2", "D3", "D4", "C5", "C4", "C3", "C2", "C1", "C0", "C1", "C2", "B2", "B1", "B0", "B1", "E4", "E3", "E2", "E1", "E0", "E1", "E2", "E3", "E4", "E5", "E6", "E5", "E4", "B1", "B2", "B3", "B2", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C7", "C6", "C5", "D4", "D5", "D6", "D7", "D8", "D7", "D6", "A9", "A8", "A7", "A6", "A5", "G2", "G1", "G0", "G1", "G2", "G3", "G4", "G5", "G6", "G5", "G4", "G3", "G2", "A5", "A4", "A3", "A2", "A1", "A0"]
+  mimo_bot (INVALID: No transfer connection between G4 and A2):
+    start_time: 06:00
+    route (17 stations): ["A0", "A1", "G4", "A2", "A3", "D3", "A4", "F9", "A5", "G2", "A6", "A7", "A8", "E3", "A9", "D6", "A10"]
+  nemotron_bot (INVALID: No train available at E4 on line E direction rev after 21:38):
+    start_time: 06:00
+    route (116 stations): ["C8", "C7", "C6", "C5", "D4", "C5", "D4", "D5", "D6", "A9", "A10", "A9", "A8", "E3", "A8", "E3", "E2", "E1", "E0", "E1", "E2", "E3", "A8", "A7", "A6", "A5", "G2", "A5", "A4", "F9", "A4", "F9", "F8", "F7", "F6", "F5", "F4", "F3", "F2", "F1", "D2", "F1", "D2", "D1", "D0", "D1", "D2", "F1", "F0", "F1", "D2", "D3", "A3", "D3", "A3", "A2", "A1", "G4", "A1", "A0", "A1", "G4", "G3", "G4", "G5", "G6", "G5", "G4", "A1", "A2", "A3", "A4", "F9", "F10", "F9", "A4", "A5", "G2", "G1", "G0", "G1", "G2", "A5", "A4", "A3", "D3", "D4", "C5", "C4", "C3", "C2", "B2", "C2", "C1", "C0", "C1", "C2", "B2", "B3", "B2", "B1", "E4", "E5", "E6", "E5", "E4", "B1", "B0", "B1", "E4", "E3", "A8", "A9", "D6", "D7", "D8"]
+
+--- ROUND 6: 6 lines, 55 stations, 7 transfers ---
+NETWORK:
+{
+  "lines": [
+    {
+      "id": "A",
+      "stations": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ],
+      "segments": [
+        12,
+        10,
+        5,
+        14,
+        4,
+        12,
+        7,
+        3,
+        9
+      ],
+      "interval": 15,
+      "start_time": "05:30",
+      "end_time": "23:15"
+    },
+    {
+      "id": "B",
+      "stations": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7",
+        "B8",
+        "B9",
+        "B10"
+      ],
+      "segments": [
+        7,
+        7,
+        12,
+        11,
+        4,
+        11,
+        13,
+        15,
+        7,
+        10
+      ],
+      "interval": 25,
+      "start_time": "07:00",
+      "end_time": "23:45"
+    },
+    {
+      "id": "C",
+      "stations": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7"
+      ],
+      "segments": [
+        3,
+        15,
+        5,
+        13,
+        10,
+        11,
+        5
+      ],
+      "interval": 25,
+      "start_time": "05:15",
+      "end_time": "22:30"
+    },
+    {
+      "id": "D",
+      "stations": [
+        "D0",
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "D8",
+        "D9",
+        "D10"
+      ],
+      "segments": [
+        5,
+        8,
+        5,
+        13,
+        12,
+        13,
+        15,
+        9,
+        15,
+        4
+      ],
+      "interval": 15,
+      "start_time": "07:15",
+      "end_time": "21:15"
+    },
+    {
+      "id": "E",
+      "stations": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "segments": [
+        7,
+        15,
+        8,
+        14,
+        15
+      ],
+      "interval": 20,
+      "start_time": "07:30",
+      "end_time": "21:45"
+    },
+    {
+      "id": "F",
+      "stations": [
+        "F0",
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "segments": [
+        15,
+        6,
+        11,
+        6,
+        3,
+        13,
+        10,
+        15
+      ],
+      "interval": 20,
+      "start_time": "07:30",
+      "end_time": "22:15"
+    }
+  ],
+  "transfers": [
+    [
+      "D6",
+      "F2"
+    ],
+    [
+      "F6",
+      "A1"
+    ],
+    [
+      "A8",
+      "B1"
+    ],
+    [
+      "B7",
+      "E3"
+    ],
+    [
+      "E4",
+      "C2"
+    ],
+    [
+      "A6",
+      "C1"
+    ],
+    [
+      "C6",
+      "B6"
+    ]
+  ]
+}
+
+  claude_bot           |  723min |     2142ms | +3 | total: 16
+  gemini_speedrun_bot  | DISCONNECTED                   |        3ms | +0 | total: 6
+  gpt54_bot            | DISCONNECTED                   |        3ms | +0 | total: 0
+  grok_bot             | INVALID: No train available at F2 on line F direction fwd after 22:31 |        4ms | +0 | total: 2
+  nemotron_bot         | INVALID: No train available at E3 on line E direction fwd after 23:44 |       38ms | +0 | total: 6
+  mimo_bot             | INVALID: No transfer connection between F6 and A2 |      184ms | +0 | total: 0
+
+SOLUTIONS:
+  claude_bot (VALID, 723min):
+    start_time: 07:30
+    route (74 stations): ["E0", "E1", "E2", "E3", "E4", "E5", "E4", "C2", "C1", "C0", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C6", "B6", "B7", "B8", "B9", "B10", "B9", "B8", "B7", "B6", "B5", "B4", "B3", "B2", "B1", "B0", "B1", "A8", "A9", "A8", "A7", "A6", "A5", "A4", "A3", "A2", "A1", "A0", "A1", "F6", "F7", "F8", "F7", "F6", "F5", "F4", "F3", "F2", "F1", "F0", "F1", "F2", "D6", "D7", "D8", "D9", "D10", "D9", "D8", "D7", "D6", "D5", "D4", "D3", "D2", "D1", "D0"]
+  grok_bot (INVALID: No train available at F2 on line F direction fwd after 22:31):
+    start_time: 05:15
+    route (109 stations): ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A8", "B1", "B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B9", "B8", "B7", "E3", "E2", "E1", "E0", "E1", "E2", "E3", "E4", "E5", "E4", "C2", "C1", "C0", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C6", "C5", "C4", "C3", "C2", "E4", "E3", "B7", "B6", "B5", "B4", "B3", "B2", "B1", "A8", "A7", "A6", "A5", "A4", "A3", "A2", "A1", "F6", "F5", "F4", "F3", "F2", "F1", "F0", "F1", "F2", "D6", "D5", "D4", "D3", "D2", "D1", "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10", "D9", "D8", "D7", "D6", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F7", "F6", "A1", "A0"]
+  mimo_bot (INVALID: No transfer connection between F6 and A2):
+    start_time: 06:00
+    route (13 stations): ["A0", "A1", "F6", "A2", "A3", "A4", "A5", "A6", "C1", "A7", "A8", "B1", "A9"]
+  nemotron_bot (INVALID: No train available at E3 on line E direction fwd after 23:44):
+    start_time: 06:00
+    route (114 stations): ["B5", "B4", "B3", "B2", "B1", "A8", "A7", "A6", "C1", "A6", "C1", "C0", "C1", "A6", "A5", "A4", "A3", "A2", "A1", "F6", "F7", "F8", "F7", "F6", "A1", "A0", "A1", "F6", "F5", "F4", "F3", "F2", "D6", "F2", "F1", "F0", "F1", "F2", "D6", "D5", "D4", "D3", "D2", "D1", "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10", "D9", "D8", "D7", "D6", "F2", "F3", "F4", "F5", "F6", "A1", "A2", "A3", "A4", "A5", "A6", "C1", "C2", "E4", "C2", "C3", "C4", "C5", "C6", "B6", "C6", "C7", "C6", "B6", "B7", "E3", "B7", "E3", "E2", "E1", "E0", "E1", "E2", "E3", "B7", "B8", "B9", "B10", "B9", "B8", "B7", "E3", "E4", "E5", "E4", "C2", "C1", "A6", "A7", "A8", "B1", "B0", "B1", "A8", "A9"]
+
+--- ROUND 7: 8 lines, 78 stations, 9 transfers ---
+NETWORK:
+{
+  "lines": [
+    {
+      "id": "A",
+      "stations": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10"
+      ],
+      "segments": [
+        14,
+        3,
+        4,
+        8,
+        11,
+        12,
+        9,
+        4,
+        3,
+        10
+      ],
+      "interval": 15,
+      "start_time": "06:00",
+      "end_time": "21:00"
+    },
+    {
+      "id": "B",
+      "stations": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7",
+        "B8"
+      ],
+      "segments": [
+        8,
+        5,
+        4,
+        5,
+        14,
+        10,
+        12,
+        13
+      ],
+      "interval": 30,
+      "start_time": "06:45",
+      "end_time": "21:45"
+    },
+    {
+      "id": "C",
+      "stations": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "segments": [
+        9,
+        7,
+        11,
+        4
+      ],
+      "interval": 25,
+      "start_time": "06:45",
+      "end_time": "22:00"
+    },
+    {
+      "id": "D",
+      "stations": [
+        "D0",
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "D8"
+      ],
+      "segments": [
+        11,
+        15,
+        10,
+        12,
+        5,
+        11,
+        7,
+        12
+      ],
+      "interval": 20,
+      "start_time": "07:30",
+      "end_time": "22:45"
+    },
+    {
+      "id": "E",
+      "stations": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8",
+        "E9",
+        "E10",
+        "E11"
+      ],
+      "segments": [
+        5,
+        11,
+        6,
+        12,
+        15,
+        11,
+        12,
+        6,
+        9,
+        12,
+        5
+      ],
+      "interval": 30,
+      "start_time": "07:30",
+      "end_time": "23:30"
+    },
+    {
+      "id": "F",
+      "stations": [
+        "F0",
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9",
+        "F10",
+        "F11",
+        "F12"
+      ],
+      "segments": [
+        7,
+        13,
+        5,
+        6,
+        8,
+        6,
+        11,
+        6,
+        11,
+        13,
+        6,
+        5
+      ],
+      "interval": 20,
+      "start_time": "07:00",
+      "end_time": "23:00"
+    },
+    {
+      "id": "G",
+      "stations": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6"
+      ],
+      "segments": [
+        10,
+        15,
+        8,
+        15,
+        3,
+        10
+      ],
+      "interval": 8,
+      "start_time": "05:45",
+      "end_time": "21:30"
+    },
+    {
+      "id": "H",
+      "stations": [
+        "H0",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6",
+        "H7",
+        "H8",
+        "H9",
+        "H10",
+        "H11"
+      ],
+      "segments": [
+        12,
+        15,
+        9,
+        12,
+        12,
+        12,
+        11,
+        9,
+        12,
+        9,
+        11
+      ],
+      "interval": 8,
+      "start_time": "07:00",
+      "end_time": "23:15"
+    }
+  ],
+  "transfers": [
+    [
+      "C3",
+      "G3"
+    ],
+    [
+      "G5",
+      "A6"
+    ],
+    [
+      "A4",
+      "B5"
+    ],
+    [
+      "B7",
+      "E6"
+    ],
+    [
+      "E4",
+      "H2"
+    ],
+    [
+      "H4",
+      "D7"
+    ],
+    [
+      "D1",
+      "F8"
+    ],
+    [
+      "C1",
+      "D5"
+    ],
+    [
+      "B6",
+      "G1"
+    ]
+  ]
+}
+
+  gpt54_bot            | DISCONNECTED                   |        2ms | +0 | total: 0
+  gemini_speedrun_bot  | DISCONNECTED                   |        2ms | +0 | total: 6
+  grok_bot             | INVALID: No train available at C1 on line C direction rev after 23:03 |        7ms | +0 | total: 2
+  mimo_bot             | INVALID: No transfer connection between B5 and A5 |      375ms | +0 | total: 0
+  claude_bot           | INVALID: Unvisited stations: ['B0', 'B1', 'B2', 'B3', 'B4', 'B6', 'B7', 'B8', 'C0', 'C1', 'C2', 'C3', 'C4', 'D0', 'D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'E0', 'E1', 'E10', 'E11', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7', 'E8', 'E9', 'F0', 'F1', 'F10', 'F11', 'F12', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'G0', 'G1', 'G2', 'G3', 'G4', 'G6', 'H0', 'H1', 'H10', 'H11', 'H2', 'H3', 'H4', 'H5', 'H6', 'H7', 'H8', 'H9'] |    11590ms | +0 | total: 16
+  nemotron_bot         | TIMEOUT                        |    60063ms | +0 | total: 6
+
+SOLUTIONS:
+  claude_bot (INVALID: Unvisited stations: ['B0', 'B1', 'B2', 'B3', 'B4', 'B6', 'B7', 'B8', 'C0', 'C1', 'C2', 'C3', 'C4', 'D0', 'D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'E0', 'E1', 'E10', 'E11', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7', 'E8', 'E9', 'F0', 'F1', 'F10', 'F11', 'F12', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'G0', 'G1', 'G2', 'G3', 'G4', 'G6', 'H0', 'H1', 'H10', 'H11', 'H2', 'H3', 'H4', 'H5', 'H6', 'H7', 'H8', 'H9']):
+    start_time: 06:00
+    route (11 stations): ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10"]
+  grok_bot (INVALID: No train available at C1 on line C direction rev after 23:03):
+    start_time: 05:45
+    route (155 stations): ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A9", "A8", "A7", "A6", "G5", "G4", "G3", "G2", "G1", "G0", "G1", "B6", "B5", "B4", "B3", "B2", "B1", "B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B7", "E6", "E5", "E4", "E3", "E2", "E1", "E0", "E1", "E2", "E3", "E4", "H2", "H1", "H0", "H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8", "H9", "H10", "H11", "H10", "H9", "H8", "H7", "H6", "H5", "H4", "D7", "D6", "D5", "D4", "D3", "D2", "D1", "D0", "D1", "F8", "F7", "F6", "F5", "F4", "F3", "F2", "F1", "F0", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "F11", "F10", "F9", "F8", "D1", "D2", "D3", "D4", "D5", "C1", "C0", "C1", "C2", "C3", "C4", "C3", "C2", "C1", "D5", "D6", "D7", "D8", "D7", "H4", "H3", "H2", "E4", "E5", "E6", "E7", "E8", "E9", "E10", "E11", "E10", "E9", "E8", "E7", "E6", "B7", "B6", "G1", "G2", "G3", "G4", "G5", "G6", "G5", "A6", "A5", "A4", "A3", "A2", "A1", "A0"]
+  mimo_bot (INVALID: No transfer connection between B5 and A5):
+    start_time: 06:00
+    route (13 stations): ["A0", "A1", "A2", "A3", "A4", "B5", "A5", "A6", "G5", "A7", "A8", "A9", "A10"]
+
+--- ROUND 8: 8 lines, 73 stations, 10 transfers ---
+NETWORK:
+{
+  "lines": [
+    {
+      "id": "A",
+      "stations": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10"
+      ],
+      "segments": [
+        4,
+        6,
+        14,
+        14,
+        13,
+        10,
+        7,
+        13,
+        10,
+        11
+      ],
+      "interval": 25,
+      "start_time": "07:15",
+      "end_time": "21:30"
+    },
+    {
+      "id": "B",
+      "stations": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7",
+        "B8",
+        "B9",
+        "B10",
+        "B11",
+        "B12",
+        "B13",
+        "B14"
+      ],
+      "segments": [
+        8,
+        5,
+        4,
+        10,
+        8,
+        7,
+        14,
+        9,
+        15,
+        12,
+        11,
+        11,
+        8,
+        8
+      ],
+      "interval": 8,
+      "start_time": "05:30",
+      "end_time": "22:45"
+    },
+    {
+      "id": "C",
+      "stations": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "segments": [
+        9,
+        13,
+        5,
+        8,
+        4
+      ],
+      "interval": 12,
+      "start_time": "05:15",
+      "end_time": "21:15"
+    },
+    {
+      "id": "D",
+      "stations": [
+        "D0",
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "segments": [
+        15,
+        3,
+        4
+      ],
+      "interval": 12,
+      "start_time": "05:15",
+      "end_time": "22:00"
+    },
+    {
+      "id": "E",
+      "stations": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8",
+        "E9",
+        "E10",
+        "E11",
+        "E12",
+        "E13"
+      ],
+      "segments": [
+        10,
+        5,
+        11,
+        4,
+        11,
+        15,
+        13,
+        4,
+        5,
+        6,
+        11,
+        6,
+        13
+      ],
+      "interval": 30,
+      "start_time": "05:45",
+      "end_time": "23:45"
+    },
+    {
+      "id": "F",
+      "stations": [
+        "F0",
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7"
+      ],
+      "segments": [
+        14,
+        8,
+        15,
+        5,
+        13,
+        7,
+        11
+      ],
+      "interval": 12,
+      "start_time": "06:45",
+      "end_time": "21:30"
+    },
+    {
+      "id": "G",
+      "stations": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9"
+      ],
+      "segments": [
+        13,
+        10,
+        13,
+        9,
+        5,
+        13,
+        7,
+        10,
+        13
+      ],
+      "interval": 10,
+      "start_time": "07:15",
+      "end_time": "21:45"
+    },
+    {
+      "id": "H",
+      "stations": [
+        "H0",
+        "H1",
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "segments": [
+        14,
+        11,
+        3,
+        6
+      ],
+      "interval": 12,
+      "start_time": "07:15",
+      "end_time": "22:45"
+    }
+  ],
+  "transfers": [
+    [
+      "B11",
+      "E10"
+    ],
+    [
+      "E2",
+      "H3"
+    ],
+    [
+      "H1",
+      "G5"
+    ],
+    [
+      "G2",
+      "F4"
+    ],
+    [
+      "F3",
+      "A9"
+    ],
+    [
+      "A1",
+      "D1"
+    ],
+    [
+      "D2",
+      "C1"
+    ],
+    [
+      "H2",
+      "A6"
+    ],
+    [
+      "C4",
+      "B5"
+    ],
+    [
+      "F2",
+      "E8"
+    ]
+  ]
+}
+
+  claude_bot           |  921min |    12130ms | +3 | total: 19
+  gemini_speedrun_bot  | DISCONNECTED                   |        1ms | +0 | total: 6
+  nemotron_bot         | DISCONNECTED                   |        2ms | +0 | total: 6
+  gpt54_bot            | DISCONNECTED                   |        3ms | +0 | total: 0
+  grok_bot             | INVALID: No train available at C4 on line C direction rev after 22:31 |        5ms | +0 | total: 2
+  mimo_bot             | INVALID: No transfer connection between D1 and A2 |      361ms | +0 | total: 0
+
+SOLUTIONS:
+  claude_bot (VALID, 921min):
+    start_time: 06:42
+    route (100 stations): ["B14", "B13", "B12", "B11", "B10", "B9", "B8", "B7", "B6", "B5", "B4", "B3", "B2", "B1", "B0", "B1", "B2", "B3", "B4", "B5", "C4", "C5", "C4", "C3", "C2", "C1", "C0", "C1", "D2", "D3", "D2", "D1", "D0", "D1", "A1", "A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A9", "F3", "F2", "F1", "F0", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F6", "F5", "F4", "G2", "G1", "G0", "G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9", "G8", "G7", "G6", "G5", "H1", "H0", "H1", "H2", "H3", "H4", "H3", "E2", "E1", "E0", "E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8", "E9", "E10", "E11", "E12", "E13"]
+  grok_bot (INVALID: No train available at C4 on line C direction rev after 22:31):
+    start_time: 05:15
+    route (145 stations): ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A9", "F3", "F2", "F1", "F0", "F1", "F2", "E8", "E7", "E6", "E5", "E4", "E3", "E2", "E1", "E0", "E1", "E2", "H3", "H2", "H1", "H0", "H1", "G5", "G4", "G3", "G2", "G1", "G0", "G1", "G2", "F4", "F5", "F6", "F7", "F6", "F5", "F4", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9", "G8", "G7", "G6", "G5", "H1", "H2", "H3", "H4", "H3", "E2", "E3", "E4", "E5", "E6", "E7", "E8", "E9", "E10", "E11", "E12", "E13", "E12", "E11", "E10", "B11", "B10", "B9", "B8", "B7", "B6", "B5", "B4", "B3", "B2", "B1", "B0", "B1", "B2", "B3", "B4", "B5", "C4", "C3", "C2", "C1", "C0", "C1", "D2", "D1", "D0", "D1", "D2", "D3", "D2", "C1", "C2", "C3", "C4", "C5", "C4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12", "B13", "B14", "B13", "B12", "B11", "E10", "E9", "E8", "F2", "F3", "A9", "A8", "A7", "A6", "A5", "A4", "A3", "A2", "A1", "A0"]
+  mimo_bot (INVALID: No transfer connection between D1 and A2):
+    start_time: 06:00
+    route (14 stations): ["A0", "A1", "D1", "A2", "A3", "A4", "A5", "A6", "H2", "A7", "A8", "A9", "F3", "A10"]
+
+--- ROUND 9: 11 lines, 119 stations, 10 transfers ---
+NETWORK:
+{
+  "lines": [
+    {
+      "id": "A",
+      "stations": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10"
+      ],
+      "segments": [
+        8,
+        8,
+        13,
+        5,
+        3,
+        11,
+        4,
+        6,
+        4,
+        7
+      ],
+      "interval": 20,
+      "start_time": "05:45",
+      "end_time": "22:45"
+    },
+    {
+      "id": "B",
+      "stations": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6"
+      ],
+      "segments": [
+        4,
+        6,
+        9,
+        10,
+        14,
+        10
+      ],
+      "interval": 10,
+      "start_time": "06:15",
+      "end_time": "21:15"
+    },
+    {
+      "id": "C",
+      "stations": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15"
+      ],
+      "segments": [
+        11,
+        5,
+        3,
+        14,
+        8,
+        13,
+        10,
+        15,
+        7,
+        4,
+        6,
+        11,
+        15,
+        10,
+        9
+      ],
+      "interval": 30,
+      "start_time": "06:00",
+      "end_time": "23:45"
+    },
+    {
+      "id": "D",
+      "stations": [
+        "D0",
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "D8",
+        "D9",
+        "D10",
+        "D11",
+        "D12",
+        "D13"
+      ],
+      "segments": [
+        3,
+        7,
+        15,
+        7,
+        7,
+        3,
+        10,
+        3,
+        3,
+        11,
+        15,
+        5,
+        13
+      ],
+      "interval": 30,
+      "start_time": "06:30",
+      "end_time": "21:00"
+    },
+    {
+      "id": "E",
+      "stations": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8",
+        "E9",
+        "E10"
+      ],
+      "segments": [
+        7,
+        10,
+        3,
+        10,
+        6,
+        11,
+        9,
+        10,
+        11,
+        3
+      ],
+      "interval": 15,
+      "start_time": "05:45",
+      "end_time": "23:00"
+    },
+    {
+      "id": "F",
+      "stations": [
+        "F0",
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "segments": [
+        5,
+        7,
+        6,
+        10,
+        11,
+        3,
+        9,
+        7
+      ],
+      "interval": 30,
+      "start_time": "05:30",
+      "end_time": "23:15"
+    },
+    {
+      "id": "G",
+      "stations": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9",
+        "G10"
+      ],
+      "segments": [
+        4,
+        7,
+        15,
+        5,
+        14,
+        15,
+        5,
+        13,
+        7,
+        9
+      ],
+      "interval": 12,
+      "start_time": "05:30",
+      "end_time": "21:00"
+    },
+    {
+      "id": "H",
+      "stations": [
+        "H0",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6",
+        "H7",
+        "H8",
+        "H9",
+        "H10",
+        "H11",
+        "H12",
+        "H13",
+        "H14"
+      ],
+      "segments": [
+        13,
+        10,
+        13,
+        3,
+        13,
+        14,
+        13,
+        15,
+        6,
+        4,
+        14,
+        9,
+        11,
+        15
+      ],
+      "interval": 30,
+      "start_time": "05:30",
+      "end_time": "23:30"
+    },
+    {
+      "id": "I",
+      "stations": [
+        "I0",
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7"
+      ],
+      "segments": [
+        13,
+        4,
+        3,
+        13,
+        3,
+        5,
+        14
+      ],
+      "interval": 25,
+      "start_time": "05:15",
+      "end_time": "23:00"
+    },
+    {
+      "id": "J",
+      "stations": [
+        "J0",
+        "J1",
+        "J2",
+        "J3",
+        "J4",
+        "J5",
+        "J6"
+      ],
+      "segments": [
+        9,
+        15,
+        12,
+        7,
+        5,
+        5
+      ],
+      "interval": 25,
+      "start_time": "06:45",
+      "end_time": "21:15"
+    },
+    {
+      "id": "K",
+      "stations": [
+        "K0",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9"
+      ],
+      "segments": [
+        3,
+        6,
+        4,
+        14,
+        5,
+        13,
+        8,
+        8,
+        5
+      ],
+      "interval": 20,
+      "start_time": "07:00",
+      "end_time": "22:00"
+    }
+  ],
+  "transfers": [
+    [
+      "B5",
+      "J5"
+    ],
+    [
+      "J1",
+      "G2"
+    ],
+    [
+      "G9",
+      "H7"
+    ],
+    [
+      "H9",
+      "A9"
+    ],
+    [
+      "A6",
+      "E4"
+    ],
+    [
+      "E8",
+      "F5"
+    ],
+    [
+      "F3",
+      "C14"
+    ],
+    [
+      "C10",
+      "D7"
+    ],
+    [
+      "D8",
+      "K5"
+    ],
+    [
+      "K6",
+      "I2"
+    ]
+  ]
+}
+
+  nemotron_bot         | DISCONNECTED                   |        1ms | +0 | total: 6
+  gpt54_bot            | DISCONNECTED                   |        1ms | +0 | total: 0
+  gemini_speedrun_bot  | DISCONNECTED                   |        2ms | +0 | total: 6
+  grok_bot             | INVALID: No train available at C14 on line C direction rev after 23:46 |        3ms | +0 | total: 2
+  mimo_bot             | INVALID: No transfer connection between E4 and A7 |      897ms | +0 | total: 0
+  claude_bot           | INVALID: Unvisited stations: ['B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'C0', 'C1', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'D0', 'D1', 'D10', 'D11', 'D12', 'D13', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'E0', 'E1', 'E10', 'E2', 'E3', 'E5', 'E6', 'E7', 'E8', 'E9', 'F0', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'G0', 'G1', 'G10', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'G8', 'G9', 'H0', 'H1', 'H10', 'H11', 'H12', 'H13', 'H14', 'H2', 'H3', 'H4', 'H5', 'H6', 'H7', 'H8', 'I0', 'I1', 'I2', 'I3', 'I4', 'I5', 'I6', 'I7', 'J0', 'J1', 'J2', 'J3', 'J4', 'J5', 'J6', 'K0', 'K1', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7', 'K8', 'K9'] |    14023ms | +0 | total: 19
+
+SOLUTIONS:
+  claude_bot (INVALID: Unvisited stations: ['B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'C0', 'C1', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'D0', 'D1', 'D10', 'D11', 'D12', 'D13', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'E0', 'E1', 'E10', 'E2', 'E3', 'E5', 'E6', 'E7', 'E8', 'E9', 'F0', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'G0', 'G1', 'G10', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'G8', 'G9', 'H0', 'H1', 'H10', 'H11', 'H12', 'H13', 'H14', 'H2', 'H3', 'H4', 'H5', 'H6', 'H7', 'H8', 'I0', 'I1', 'I2', 'I3', 'I4', 'I5', 'I6', 'I7', 'J0', 'J1', 'J2', 'J3', 'J4', 'J5', 'J6', 'K0', 'K1', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7', 'K8', 'K9']):
+    start_time: 05:45
+    route (11 stations): ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10"]
+  grok_bot (INVALID: No train available at C14 on line C direction rev after 23:46):
+    start_time: 05:15
+    route (237 stations): ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A9", "H9", "H8", "H7", "H6", "H5", "H4", "H3", "H2", "H1", "H0", "H1", "H2", "H3", "H4", "H5", "H6", "H7", "G9", "G8", "G7", "G6", "G5", "G4", "G3", "G2", "G1", "G0", "G1", "G2", "J1", "J0", "J1", "J2", "J3", "J4", "J5", "J6", "J5", "B5", "B4", "B3", "B2", "B1", "B0", "B1", "B2", "B3", "B4", "B5", "B6", "B5", "J5", "J4", "J3", "J2", "J1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9", "G10", "G9", "H7", "H8", "H9", "H10", "H11", "H12", "H13", "H14", "H13", "H12", "H11", "H10", "H9", "A9", "A8", "A7", "A6", "E4", "E3", "E2", "E1", "E0", "E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8", "E9", "E10", "E9", "E8", "F5", "F4", "F3", "F2", "F1", "F0", "F1", "F2", "F3", "C14", "C13", "C12", "C11", "C10", "C9", "C8", "C7", "C6", "C5", "C4", "C3", "C2", "C1", "C0", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "D7", "D6", "D5", "D4", "D3", "D2", "D1", "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10", "D11", "D12", "D13", "D12", "D11", "D10", "D9", "D8", "K5", "K4", "K3", "K2", "K1", "K0", "K1", "K2", "K3", "K4", "K5", "K6", "K7", "K8", "K9", "K8", "K7", "K6", "I2", "I1", "I0", "I1", "I2", "I3", "I4", "I5", "I6", "I7", "I6", "I5", "I4", "I3", "I2", "K6", "K5", "D8", "D7", "C10", "C11", "C12", "C13", "C14", "C15", "C14", "F3", "F4", "F5", "F6", "F7", "F8", "F7", "F6", "F5", "E8", "E7", "E6", "E5", "E4", "A6", "A5", "A4", "A3", "A2", "A1", "A0"]
+  mimo_bot (INVALID: No transfer connection between E4 and A7):
+    start_time: 06:00
+    route (13 stations): ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "E4", "A7", "A8", "A9", "H9", "A10"]
+
+--- ROUND 10: 5 lines, 59 stations, 4 transfers ---
+NETWORK:
+{
+  "lines": [
+    {
+      "id": "A",
+      "stations": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11"
+      ],
+      "segments": [
+        12,
+        4,
+        14,
+        5,
+        8,
+        9,
+        9,
+        15,
+        10,
+        8,
+        7
+      ],
+      "interval": 25,
+      "start_time": "05:00",
+      "end_time": "22:00"
+    },
+    {
+      "id": "B",
+      "stations": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7",
+        "B8"
+      ],
+      "segments": [
+        8,
+        3,
+        15,
+        7,
+        9,
+        11,
+        14,
+        9
+      ],
+      "interval": 15,
+      "start_time": "06:15",
+      "end_time": "23:00"
+    },
+    {
+      "id": "C",
+      "stations": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "segments": [
+        12,
+        15,
+        3,
+        6,
+        8
+      ],
+      "interval": 15,
+      "start_time": "06:30",
+      "end_time": "22:15"
+    },
+    {
+      "id": "D",
+      "stations": [
+        "D0",
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "D8",
+        "D9",
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D14",
+        "D15"
+      ],
+      "segments": [
+        4,
+        9,
+        11,
+        7,
+        4,
+        10,
+        14,
+        4,
+        15,
+        3,
+        10,
+        3,
+        8,
+        10,
+        11
+      ],
+      "interval": 15,
+      "start_time": "06:00",
+      "end_time": "23:15"
+    },
+    {
+      "id": "E",
+      "stations": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8",
+        "E9",
+        "E10",
+        "E11",
+        "E12",
+        "E13",
+        "E14",
+        "E15"
+      ],
+      "segments": [
+        6,
+        5,
+        4,
+        8,
+        9,
+        4,
+        13,
+        9,
+        4,
+        6,
+        11,
+        13,
+        6,
+        11,
+        8
+      ],
+      "interval": 15,
+      "start_time": "05:45",
+      "end_time": "22:45"
+    }
+  ],
+  "transfers": [
+    [
+      "D3",
+      "E3"
+    ],
+    [
+      "E11",
+      "C2"
+    ],
+    [
+      "C1",
+      "B1"
+    ],
+    [
+      "B6",
+      "A7"
+    ]
+  ]
+}
+
+  claude_bot           |  707min |      830ms | +3 | total: 22
+  grok_bot             | 1026min |        1ms | +2 | total: 4
+  gemini_speedrun_bot  | DISCONNECTED                   |        1ms | +0 | total: 6
+  nemotron_bot         | DISCONNECTED                   |        1ms | +0 | total: 6
+  gpt54_bot            | DISCONNECTED                   |        2ms | +0 | total: 0
+  mimo_bot             | INVALID: No transfer connection between B6 and A8 |      307ms | +0 | total: 0
+
+SOLUTIONS:
+  claude_bot (VALID, 707min):
+    start_time: 07:00
+    route (80 stations): ["D15", "D14", "D13", "D12", "D11", "D10", "D9", "D8", "D7", "D6", "D5", "D4", "D3", "D2", "D1", "D0", "D1", "D2", "D3", "E3", "E2", "E1", "E0", "E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8", "E9", "E10", "E11", "E12", "E13", "E14", "E15", "E14", "E13", "E12", "E11", "C2", "C3", "C4", "C5", "C4", "C3", "C2", "C1", "C0", "C1", "B1", "B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B7", "B6", "A7", "A8", "A9", "A10", "A11", "A10", "A9", "A8", "A7", "A6", "A5", "A4", "A3", "A2", "A1", "A0"]
+  grok_bot (VALID, 1026min):
+    start_time: 05:00
+    route (117 stations): ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "A10", "A9", "A8", "A7", "B6", "B5", "B4", "B3", "B2", "B1", "B0", "B1", "C1", "C0", "C1", "C2", "C3", "C4", "C5", "C4", "C3", "C2", "E11", "E10", "E9", "E8", "E7", "E6", "E5", "E4", "E3", "E2", "E1", "E0", "E1", "E2", "E3", "D3", "D2", "D1", "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10", "D11", "D12", "D13", "D14", "D15", "D14", "D13", "D12", "D11", "D10", "D9", "D8", "D7", "D6", "D5", "D4", "D3", "E3", "E4", "E5", "E6", "E7", "E8", "E9", "E10", "E11", "E12", "E13", "E14", "E15", "E14", "E13", "E12", "E11", "C2", "C1", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B7", "B6", "A7", "A6", "A5", "A4", "A3", "A2", "A1", "A0"]
+  mimo_bot (INVALID: No transfer connection between B6 and A8):
+    start_time: 06:00
+    route (13 stations): ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "B6", "A8", "A9", "A10", "A11"]
+
+
+============================================================
+FINAL TOURNAMENT RESULTS
+============================================================
+  #1  claude_bot            22 points
+  #2  gemini_speedrun_bot    6 points
+  #3  nemotron_bot           6 points
+  #4  grok_bot               4 points
+  #5  mimo_bot               0 points
+  #6  gpt54_bot              0 points
