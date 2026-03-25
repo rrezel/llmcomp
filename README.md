@@ -8,17 +8,21 @@ This project aims to benchmark various Large Language Models (LLMs) by giving th
 
 ## Tests
 
-### 1. Soviet Post (`sovietpost/`)
+### 1. Noisy Soviet Postcodes (`noisy_numbers/`)
 
-**Task:** Write a C program that reads Soviet numerical postal codes from an ASCII `.ppm` file and outputs the digits to `stdout`. The program must only use standard libraries.
+**Task:** Write a Python 3.10 client that reads six-digit Soviet postal codes from noisy PPM images sent over TCP. Digits are drawn on a 52-dot grid. Images have 5% pixel noise with progressive scaling (±0–10%) and rotation (±0–10°). 100 rounds. Standard library only.
+
+*This is a rerun of the original Day 1 challenge ("sovietpost"), where every model scored zero. In that version, bots were given reference images of the digit glyphs but no structured data — every model invented wrong digit templates because LLMs cannot do spatial reasoning on pixel data. For the rerun, the prompt provides all 52 dot coordinates and stroke sequences as text.*
 
 **Results:**
-- **Grok:** Failed to produce valid C code.
-- **ChatGPT:** Produced valid C code, but the executable resulted in a segmentation fault.
-- **Gemini (3.1 Pro):** Code compiled and ran, but produced the wrong output.
-- **Claude (Opus 4.6):** Code compiled and ran, but produced the wrong output.
+- **Grok (Expert 4.2):** 8 points (1st). Used dot coordinates to probe the image directly with required-vs-forbidden stroke scoring. Many near-misses with 5/6 digits correct.
+- **MiMo:** 0 points. Pipeline ran but cell segmentation was misaligned.
+- **Claude (Opus 4.6):** 0 points. Correct 7-segment digit model, but erosion destroyed all image content. Sent `000000` every round.
+- **Gemini (Pro 3.1):** 0 points. Built templates from provided stroke data, but matching always picked digit 8 (most ink). Sent `888888` every round.
+- **ChatGPT (GPT 5.3):** 0 points. Eliminated round 1 (I/O timeout).
+- **Nemotron:** 0 points. Eliminated round 1 (timeout).
 
-For more details on this test, see the [article](sovietpost/article.md) and the [prompt](sovietpost/prompt.md).
+For more details on this test, see the [article](noisy_numbers/article.md) and the [prompt](noisy_numbers/prompt.md).
 
 ### 2. Word Racer Champion (`wordracerchampion/`)
 
@@ -74,14 +78,14 @@ For more details on this test, see the [article](subwayspeedrun/article.md) and 
 
 ## Medal Tally
 
-| Model | Soviet Post | Word Racer | Word Ladder | Maze | Subway | Gold | Silver | Bronze |
+| Model | Postcodes | Word Racer | Word Ladder | Maze | Subway | Gold | Silver | Bronze |
 |---|---|---|---|---|---|---|---|---|
-| **Claude (Opus 4.6)** | DQ | Gold | Gold | Gold | Gold | **4** | 0 | 0 |
-| **Grok (Expert 4.2)** | DQ | — | Silver | Silver | — | 0 | **2** | 0 |
-| **Gemini (Pro 3.1)** | DQ | — | Bronze | DQ | Silver | 0 | **1** | **1** |
-| **MiMo** | DNP | Silver | DNP | DQ | DQ | 0 | **1** | 0 |
-| **Nemotron** | DNP | DNP | DNP | DNP | Bronze | 0 | 0 | **1** |
+| **Claude (Opus 4.6)** | — | Gold | Gold | Gold | Gold | **4** | 0 | 0 |
+| **Grok (Expert 4.2)** | Gold | — | Silver | Silver | — | **1** | **2** | 0 |
+| **Gemini (Pro 3.1)** | — | — | Bronze | DQ | Silver | 0 | **1** | **1** |
+| **MiMo** | — | Silver | DNP | DQ | DQ | 0 | **1** | 0 |
+| **Nemotron** | DQ | DNP | DNP | DNP | Bronze | 0 | 0 | **1** |
 | **ChatGPT (GPT 5.3)** | DQ | — | — | DQ | DQ | 0 | 0 | 0 |
 
-*DQ = disqualified (crashed, invalid output, or eliminated early). DNP = did not participate. — = finished but did not medal. Soviet Post: no model produced correct output — all DQ. Subway: Gemini and Nemotron tied on 6 points, but Gemini won 2 rounds vs 0, taking silver.*
+*DQ = disqualified (crashed, invalid output, or eliminated early). DNP = did not participate. — = finished but did not medal. Postcodes: Grok scored 8/100, all others scored 0 (no silver/bronze awarded). Subway: Gemini and Nemotron tied on 6 points, but Gemini won 2 rounds vs 0, taking silver.*
 

@@ -1,0 +1,612 @@
+--- ROUND 1: 104332 (noise=5.0% scale=±0% rot=±0°) ---
+  GrokSovietBot        | time:   1179.9ms | WRONG (sent '000000', correct '104332')
+  mimo_bot             | time:   1180.0ms | WRONG (sent '481840', correct '104332')
+  gpt54_bot            | time:   1180.0ms | ELIMINATED (timeout)
+  claude_bot           | time:   1180.0ms | WRONG (sent '000000', correct '104332')
+  gemini_bot           | time:   1180.0ms | WRONG (sent '888888', correct '104332')
+  nemotron_super       | time:   1180.1ms | ELIMINATED (timeout)
+
+--- ROUND 2: 675404 (noise=5.0% scale=±0% rot=±0°) ---
+  GrokSovietBot        | time:    916.6ms | WRONG (sent '000000', correct '675404')
+  mimo_bot             | time:    916.7ms | WRONG (sent '441800', correct '675404')
+  claude_bot           | time:    916.7ms | WRONG (sent '000000', correct '675404')
+  gemini_bot           | time:    916.7ms | WRONG (sent '888888', correct '675404')
+
+--- ROUND 3: 552620 (noise=5.0% scale=±0% rot=±0°) ---
+  GrokSovietBot        | time:   1043.3ms | CORRECT  +1 (total: 1)
+  mimo_bot             | time:   1043.4ms | WRONG (sent '011890', correct '552620')
+  claude_bot           | time:   1043.4ms | WRONG (sent '000000', correct '552620')
+  gemini_bot           | time:   1043.4ms | WRONG (sent '888888', correct '552620')
+
+--- ROUND 4: 550049 (noise=5.0% scale=±0% rot=±0°) ---
+  GrokSovietBot        | time:    783.5ms | WRONG (sent '000000', correct '550049')
+  mimo_bot             | time:    783.5ms | WRONG (sent '108804', correct '550049')
+  claude_bot           | time:    783.6ms | WRONG (sent '000000', correct '550049')
+  gemini_bot           | time:    783.6ms | WRONG (sent '888888', correct '550049')
+
+--- ROUND 5: 510570 (noise=5.0% scale=±0% rot=±0°) ---
+  GrokSovietBot        | time:    910.8ms | WRONG (sent '000000', correct '510570')
+  mimo_bot             | time:    910.8ms | WRONG (sent '408800', correct '510570')
+  claude_bot           | time:    910.9ms | WRONG (sent '000000', correct '510570')
+  gemini_bot           | time:    910.9ms | WRONG (sent '888888', correct '510570')
+
+--- ROUND 6: 567557 (noise=5.0% scale=±1% rot=±1°) ---
+  GrokSovietBot        | time:   1053.9ms | CORRECT  +1 (total: 2)
+  mimo_bot             | time:   1053.9ms | WRONG (sent '108800', correct '567557')
+  claude_bot           | time:   1053.9ms | WRONG (sent '000000', correct '567557')
+  gemini_bot           | time:   1054.0ms | WRONG (sent '888888', correct '567557')
+
+--- ROUND 7: 288837 (noise=5.0% scale=±1% rot=±1°) ---
+  GrokSovietBot        | time:   1006.4ms | CORRECT  +1 (total: 3)
+  mimo_bot             | time:   1006.5ms | WRONG (sent '441890', correct '288837')
+  claude_bot           | time:   1006.5ms | WRONG (sent '000000', correct '288837')
+  gemini_bot           | time:   1006.5ms | WRONG (sent '888888', correct '288837')
+
+--- ROUND 8: 617786 (noise=5.0% scale=±1% rot=±1°) ---
+  GrokSovietBot        | time:    908.1ms | WRONG (sent '000000', correct '617786')
+  mimo_bot             | time:    908.1ms | WRONG (sent '101890', correct '617786')
+  claude_bot           | time:    908.1ms | WRONG (sent '000000', correct '617786')
+  gemini_bot           | time:    908.2ms | WRONG (sent '888888', correct '617786')
+
+--- ROUND 9: 703706 (noise=5.0% scale=±1% rot=±1°) ---
+  GrokSovietBot        | time:   1032.9ms | CORRECT  +1 (total: 4)
+  mimo_bot             | time:   1032.9ms | WRONG (sent '148800', correct '703706')
+  claude_bot           | time:   1033.0ms | WRONG (sent '000000', correct '703706')
+  gemini_bot           | time:   1033.0ms | WRONG (sent '888888', correct '703706')
+
+--- ROUND 10: 063137 (noise=5.0% scale=±1% rot=±1°) ---
+  GrokSovietBot        | time:    905.0ms | WRONG (sent '000000', correct '063137')
+  mimo_bot             | time:    905.0ms | WRONG (sent '441804', correct '063137')
+  claude_bot           | time:    905.0ms | WRONG (sent '000000', correct '063137')
+  gemini_bot           | time:    905.1ms | WRONG (sent '888888', correct '063137')
+
+--- ROUND 11: 041194 (noise=5.0% scale=±1% rot=±1°) ---
+  GrokSovietBot        | time:    762.7ms | WRONG (sent '000000', correct '041194')
+  mimo_bot             | time:    762.7ms | WRONG (sent '401800', correct '041194')
+  claude_bot           | time:    762.7ms | WRONG (sent '000000', correct '041194')
+  gemini_bot           | time:    762.8ms | WRONG (sent '888888', correct '041194')
+
+--- ROUND 12: 118664 (noise=5.0% scale=±1% rot=±1°) ---
+  GrokSovietBot        | time:    764.6ms | WRONG (sent '000000', correct '118664')
+  mimo_bot             | time:    764.7ms | WRONG (sent '011840', correct '118664')
+  claude_bot           | time:    764.7ms | WRONG (sent '000000', correct '118664')
+  gemini_bot           | time:    764.7ms | WRONG (sent '888888', correct '118664')
+
+--- ROUND 13: 165435 (noise=5.0% scale=±1% rot=±1°) ---
+  GrokSovietBot        | time:   1010.8ms | WRONG (sent '768438', correct '165435')
+  mimo_bot             | time:   1010.8ms | WRONG (sent '408894', correct '165435')
+  claude_bot           | time:   1010.8ms | WRONG (sent '000000', correct '165435')
+  gemini_bot           | time:   1010.9ms | WRONG (sent '888888', correct '165435')
+
+--- ROUND 14: 153125 (noise=5.0% scale=±1% rot=±1°) ---
+  GrokSovietBot        | time:    772.6ms | WRONG (sent '000000', correct '153125')
+  mimo_bot             | time:    772.6ms | WRONG (sent '091810', correct '153125')
+  claude_bot           | time:    772.6ms | WRONG (sent '000000', correct '153125')
+  gemini_bot           | time:    772.7ms | WRONG (sent '888888', correct '153125')
+
+--- ROUND 15: 579675 (noise=5.0% scale=±1% rot=±1°) ---
+  GrokSovietBot        | time:   1019.8ms | WRONG (sent '519675', correct '579675')
+  mimo_bot             | time:   1019.8ms | WRONG (sent '188840', correct '579675')
+  claude_bot           | time:   1019.9ms | WRONG (sent '000000', correct '579675')
+  gemini_bot           | time:   1019.9ms | WRONG (sent '888888', correct '579675')
+
+--- ROUND 16: 696805 (noise=5.0% scale=±2% rot=±2°) ---
+  GrokSovietBot        | time:   1000.4ms | CORRECT  +1 (total: 5)
+  mimo_bot             | time:   1000.4ms | WRONG (sent '408880', correct '696805')
+  claude_bot           | time:   1000.4ms | WRONG (sent '000000', correct '696805')
+  gemini_bot           | time:   1000.5ms | WRONG (sent '888888', correct '696805')
+
+--- ROUND 17: 117134 (noise=5.0% scale=±2% rot=±2°) ---
+  GrokSovietBot        | time:    552.3ms | WRONG (sent '000000', correct '117134')
+  mimo_bot             | time:    552.3ms | WRONG (sent '411800', correct '117134')
+  claude_bot           | time:    552.3ms | WRONG (sent '000000', correct '117134')
+  gemini_bot           | time:    552.4ms | WRONG (sent '888888', correct '117134')
+
+--- ROUND 18: 777056 (noise=5.0% scale=±2% rot=±2°) ---
+  GrokSovietBot        | time:    995.9ms | WRONG (sent '177056', correct '777056')
+  mimo_bot             | time:    995.9ms | WRONG (sent '118800', correct '777056')
+  claude_bot           | time:    996.0ms | WRONG (sent '000000', correct '777056')
+  gemini_bot           | time:    996.0ms | WRONG (sent '888888', correct '777056')
+
+--- ROUND 19: 864317 (noise=5.0% scale=±2% rot=±2°) ---
+  GrokSovietBot        | time:    795.9ms | WRONG (sent '000000', correct '864317')
+  mimo_bot             | time:    796.0ms | WRONG (sent '408804', correct '864317')
+  claude_bot           | time:    796.0ms | WRONG (sent '000000', correct '864317')
+  gemini_bot           | time:    796.0ms | WRONG (sent '888888', correct '864317')
+
+--- ROUND 20: 969263 (noise=5.0% scale=±2% rot=±2°) ---
+  GrokSovietBot        | time:   1001.6ms | CORRECT  +1 (total: 6)
+  mimo_bot             | time:   1001.6ms | WRONG (sent '408864', correct '969263')
+  claude_bot           | time:   1001.7ms | WRONG (sent '000000', correct '969263')
+  gemini_bot           | time:   1001.7ms | WRONG (sent '888888', correct '969263')
+
+--- ROUND 21: 169814 (noise=5.0% scale=±2% rot=±2°) ---
+  GrokSovietBot        | time:    802.0ms | WRONG (sent '000000', correct '169814')
+  mimo_bot             | time:    802.0ms | WRONG (sent '441804', correct '169814')
+  claude_bot           | time:    802.0ms | WRONG (sent '000000', correct '169814')
+  gemini_bot           | time:    802.0ms | WRONG (sent '888888', correct '169814')
+
+--- ROUND 22: 473398 (noise=5.0% scale=±2% rot=±2°) ---
+  GrokSovietBot        | time:    996.7ms | WRONG (sent '483398', correct '473398')
+  mimo_bot             | time:    996.7ms | WRONG (sent '001800', correct '473398')
+  claude_bot           | time:    996.7ms | WRONG (sent '000000', correct '473398')
+  gemini_bot           | time:    996.8ms | WRONG (sent '888888', correct '473398')
+
+--- ROUND 23: 649746 (noise=5.0% scale=±2% rot=±2°) ---
+  GrokSovietBot        | time:   1010.7ms | WRONG (sent '689746', correct '649746')
+  mimo_bot             | time:   1010.8ms | WRONG (sent '118680', correct '649746')
+  claude_bot           | time:   1010.8ms | WRONG (sent '000000', correct '649746')
+  gemini_bot           | time:   1010.8ms | WRONG (sent '888888', correct '649746')
+
+--- ROUND 24: 848434 (noise=5.0% scale=±2% rot=±2°) ---
+  GrokSovietBot        | time:    884.4ms | WRONG (sent '000000', correct '848434')
+  mimo_bot             | time:    884.4ms | WRONG (sent '411800', correct '848434')
+  claude_bot           | time:    884.5ms | WRONG (sent '000000', correct '848434')
+  gemini_bot           | time:    884.5ms | WRONG (sent '888888', correct '848434')
+
+--- ROUND 25: 740279 (noise=5.0% scale=±2% rot=±2°) ---
+  GrokSovietBot        | time:   1025.0ms | WRONG (sent '748279', correct '740279')
+  mimo_bot             | time:   1025.0ms | WRONG (sent '401810', correct '740279')
+  claude_bot           | time:   1025.1ms | WRONG (sent '000000', correct '740279')
+  gemini_bot           | time:   1025.1ms | WRONG (sent '888888', correct '740279')
+
+--- ROUND 26: 203945 (noise=5.0% scale=±3% rot=±3°) ---
+  GrokSovietBot        | time:    882.6ms | WRONG (sent '000000', correct '203945')
+  mimo_bot             | time:    882.6ms | WRONG (sent '111840', correct '203945')
+  claude_bot           | time:    882.6ms | WRONG (sent '000000', correct '203945')
+  gemini_bot           | time:    882.7ms | WRONG (sent '888888', correct '203945')
+
+--- ROUND 27: 362612 (noise=5.0% scale=±3% rot=±3°) ---
+  GrokSovietBot        | time:   1020.6ms | WRONG (sent '362684', correct '362612')
+  mimo_bot             | time:   1020.7ms | WRONG (sent '401804', correct '362612')
+  claude_bot           | time:   1020.7ms | WRONG (sent '000000', correct '362612')
+  gemini_bot           | time:   1020.7ms | WRONG (sent '888888', correct '362612')
+
+--- ROUND 28: 444686 (noise=5.0% scale=±3% rot=±3°) ---
+  GrokSovietBot        | time:    745.5ms | WRONG (sent '000000', correct '444686')
+  mimo_bot             | time:    745.6ms | WRONG (sent '118800', correct '444686')
+  claude_bot           | time:    745.6ms | WRONG (sent '000000', correct '444686')
+  gemini_bot           | time:    745.6ms | WRONG (sent '888888', correct '444686')
+
+--- ROUND 29: 415868 (noise=5.0% scale=±3% rot=±3°) ---
+  GrokSovietBot        | time:    846.7ms | WRONG (sent '000000', correct '415868')
+  mimo_bot             | time:    846.8ms | WRONG (sent '498800', correct '415868')
+  claude_bot           | time:    846.8ms | WRONG (sent '000000', correct '415868')
+  gemini_bot           | time:    846.8ms | WRONG (sent '888888', correct '415868')
+
+--- ROUND 30: 750801 (noise=5.0% scale=±3% rot=±3°) ---
+  GrokSovietBot        | time:   1025.0ms | WRONG (sent '794444', correct '750801')
+  mimo_bot             | time:   1025.0ms | WRONG (sent '101807', correct '750801')
+  claude_bot           | time:   1025.0ms | WRONG (sent '000000', correct '750801')
+  gemini_bot           | time:   1025.1ms | WRONG (sent '888888', correct '750801')
+
+--- ROUND 31: 136296 (noise=5.0% scale=±3% rot=±3°) ---
+  GrokSovietBot        | time:   1147.0ms | WRONG (sent '836296', correct '136296')
+  mimo_bot             | time:   1147.1ms | WRONG (sent '011880', correct '136296')
+  claude_bot           | time:   1147.1ms | WRONG (sent '000000', correct '136296')
+  gemini_bot           | time:   1147.1ms | WRONG (sent '888888', correct '136296')
+
+--- ROUND 32: 065923 (noise=5.0% scale=±3% rot=±3°) ---
+  GrokSovietBot        | time:   1060.6ms | WRONG (sent '478997', correct '065923')
+  mimo_bot             | time:   1060.6ms | WRONG (sent '418800', correct '065923')
+  claude_bot           | time:   1060.7ms | WRONG (sent '000000', correct '065923')
+  gemini_bot           | time:   1060.7ms | WRONG (sent '888888', correct '065923')
+
+--- ROUND 33: 385492 (noise=5.0% scale=±3% rot=±3°) ---
+  GrokSovietBot        | time:   1145.7ms | WRONG (sent '388492', correct '385492')
+  mimo_bot             | time:   1145.7ms | WRONG (sent '411890', correct '385492')
+  claude_bot           | time:   1145.8ms | WRONG (sent '000000', correct '385492')
+  gemini_bot           | time:   1145.8ms | WRONG (sent '888888', correct '385492')
+
+--- ROUND 34: 005831 (noise=5.0% scale=±3% rot=±3°) ---
+  GrokSovietBot        | time:    790.3ms | WRONG (sent '000000', correct '005831')
+  mimo_bot             | time:    790.4ms | WRONG (sent '108804', correct '005831')
+  claude_bot           | time:    790.4ms | WRONG (sent '000000', correct '005831')
+  gemini_bot           | time:    790.4ms | WRONG (sent '888888', correct '005831')
+
+--- ROUND 35: 181359 (noise=5.0% scale=±3% rot=±3°) ---
+  GrokSovietBot        | time:   1116.6ms | WRONG (sent '147347', correct '181359')
+  mimo_bot             | time:   1116.6ms | WRONG (sent '109814', correct '181359')
+  claude_bot           | time:   1116.6ms | WRONG (sent '000000', correct '181359')
+  gemini_bot           | time:   1116.7ms | WRONG (sent '888888', correct '181359')
+
+--- ROUND 36: 245089 (noise=5.0% scale=±4% rot=±4°) ---
+  GrokSovietBot        | time:   1072.4ms | WRONG (sent '255889', correct '245089')
+  mimo_bot             | time:   1072.4ms | WRONG (sent '148804', correct '245089')
+  claude_bot           | time:   1072.5ms | WRONG (sent '000000', correct '245089')
+  gemini_bot           | time:   1072.5ms | WRONG (sent '888888', correct '245089')
+
+--- ROUND 37: 773783 (noise=5.0% scale=±4% rot=±4°) ---
+  GrokSovietBot        | time:   1024.0ms | WRONG (sent '173783', correct '773783')
+  mimo_bot             | time:   1024.1ms | WRONG (sent '101804', correct '773783')
+  claude_bot           | time:   1024.1ms | WRONG (sent '000000', correct '773783')
+  gemini_bot           | time:   1024.1ms | WRONG (sent '888888', correct '773783')
+
+--- ROUND 38: 446989 (noise=5.0% scale=±4% rot=±4°) ---
+  GrokSovietBot        | time:    828.7ms | WRONG (sent '000000', correct '446989')
+  mimo_bot             | time:    828.7ms | WRONG (sent '448834', correct '446989')
+  claude_bot           | time:    828.8ms | WRONG (sent '000000', correct '446989')
+  gemini_bot           | time:    828.8ms | WRONG (sent '888888', correct '446989')
+
+--- ROUND 39: 014120 (noise=5.0% scale=±4% rot=±4°) ---
+  GrokSovietBot        | time:    645.1ms | WRONG (sent '000000', correct '014120')
+  mimo_bot             | time:    645.1ms | WRONG (sent '048810', correct '014120')
+  claude_bot           | time:    645.2ms | WRONG (sent '000000', correct '014120')
+  gemini_bot           | time:    645.2ms | WRONG (sent '888888', correct '014120')
+
+--- ROUND 40: 519729 (noise=5.0% scale=±4% rot=±4°) ---
+  GrokSovietBot        | time:   1075.1ms | WRONG (sent '914499', correct '519729')
+  mimo_bot             | time:   1075.2ms | WRONG (sent '449617', correct '519729')
+  claude_bot           | time:   1075.2ms | WRONG (sent '000000', correct '519729')
+  gemini_bot           | time:   1075.2ms | WRONG (sent '888888', correct '519729')
+
+--- ROUND 41: 016203 (noise=5.0% scale=±4% rot=±4°) ---
+  GrokSovietBot        | time:   1014.7ms | WRONG (sent '806203', correct '016203')
+  mimo_bot             | time:   1014.7ms | WRONG (sent '401804', correct '016203')
+  claude_bot           | time:   1014.7ms | WRONG (sent '000000', correct '016203')
+  gemini_bot           | time:   1014.7ms | WRONG (sent '888888', correct '016203')
+
+--- ROUND 42: 441501 (noise=5.0% scale=±4% rot=±4°) ---
+  GrokSovietBot        | time:    520.1ms | WRONG (sent '000000', correct '441501')
+  mimo_bot             | time:    520.2ms | WRONG (sent '411884', correct '441501')
+  claude_bot           | time:    520.2ms | WRONG (sent '000000', correct '441501')
+  gemini_bot           | time:    561.3ms | WRONG (sent '888888', correct '441501')
+
+--- ROUND 43: 887808 (noise=5.0% scale=±4% rot=±4°) ---
+  GrokSovietBot        | time:    913.0ms | WRONG (sent '000000', correct '887808')
+  mimo_bot             | time:    913.1ms | WRONG (sent '108804', correct '887808')
+  claude_bot           | time:    913.1ms | WRONG (sent '000000', correct '887808')
+  gemini_bot           | time:    913.1ms | WRONG (sent '888888', correct '887808')
+
+--- ROUND 44: 343260 (noise=5.0% scale=±4% rot=±4°) ---
+  GrokSovietBot        | time:   1055.3ms | WRONG (sent '244321', correct '343260')
+  mimo_bot             | time:   1055.4ms | WRONG (sent '048800', correct '343260')
+  claude_bot           | time:   1055.4ms | WRONG (sent '000000', correct '343260')
+  gemini_bot           | time:   1055.4ms | WRONG (sent '888888', correct '343260')
+
+--- ROUND 45: 014216 (noise=5.0% scale=±4% rot=±4°) ---
+  GrokSovietBot        | time:    706.0ms | WRONG (sent '000000', correct '014216')
+  mimo_bot             | time:    706.0ms | WRONG (sent '408890', correct '014216')
+  claude_bot           | time:    706.0ms | WRONG (sent '000000', correct '014216')
+  gemini_bot           | time:    706.1ms | WRONG (sent '888888', correct '014216')
+
+--- ROUND 46: 139608 (noise=5.0% scale=±5% rot=±5°) ---
+  GrokSovietBot        | time:   1010.3ms | WRONG (sent '094110', correct '139608')
+  mimo_bot             | time:   1010.4ms | WRONG (sent '189844', correct '139608')
+  claude_bot           | time:   1010.4ms | WRONG (sent '000000', correct '139608')
+  gemini_bot           | time:   1010.5ms | WRONG (sent '888888', correct '139608')
+
+--- ROUND 47: 533356 (noise=5.0% scale=±5% rot=±5°) ---
+  GrokSovietBot        | time:    765.0ms | WRONG (sent '000000', correct '533356')
+  mimo_bot             | time:    765.1ms | WRONG (sent '401890', correct '533356')
+  claude_bot           | time:    765.1ms | WRONG (sent '000000', correct '533356')
+  gemini_bot           | time:    765.1ms | WRONG (sent '888888', correct '533356')
+
+--- ROUND 48: 879835 (noise=5.0% scale=±5% rot=±5°) ---
+  GrokSovietBot        | time:   1086.5ms | WRONG (sent '019711', correct '879835')
+  mimo_bot             | time:   1086.5ms | WRONG (sent '408814', correct '879835')
+  claude_bot           | time:   1086.6ms | WRONG (sent '000000', correct '879835')
+  gemini_bot           | time:   1086.6ms | WRONG (sent '888888', correct '879835')
+
+--- ROUND 49: 180842 (noise=5.0% scale=±5% rot=±5°) ---
+  GrokSovietBot        | time:    960.7ms | WRONG (sent '000000', correct '180842')
+  mimo_bot             | time:    960.8ms | WRONG (sent '118864', correct '180842')
+  claude_bot           | time:    960.8ms | WRONG (sent '000000', correct '180842')
+  gemini_bot           | time:    960.8ms | WRONG (sent '888888', correct '180842')
+
+--- ROUND 50: 519827 (noise=5.0% scale=±5% rot=±5°) ---
+  GrokSovietBot        | time:    924.5ms | WRONG (sent '000000', correct '519827')
+  mimo_bot             | time:    924.5ms | WRONG (sent '401800', correct '519827')
+  claude_bot           | time:    924.6ms | WRONG (sent '000000', correct '519827')
+  gemini_bot           | time:    924.6ms | WRONG (sent '888888', correct '519827')
+
+--- ROUND 51: 869663 (noise=5.0% scale=±5% rot=±5°) ---
+  GrokSovietBot        | time:   1041.0ms | WRONG (sent '019642', correct '869663')
+  mimo_bot             | time:   1041.0ms | WRONG (sent '101817', correct '869663')
+  claude_bot           | time:   1041.0ms | WRONG (sent '000000', correct '869663')
+  gemini_bot           | time:   1041.1ms | WRONG (sent '888888', correct '869663')
+
+--- ROUND 52: 901778 (noise=5.0% scale=±5% rot=±5°) ---
+  GrokSovietBot        | time:    995.4ms | WRONG (sent '401111', correct '901778')
+  mimo_bot             | time:    995.5ms | WRONG (sent '408800', correct '901778')
+  claude_bot           | time:    995.5ms | WRONG (sent '000000', correct '901778')
+  gemini_bot           | time:    995.5ms | WRONG (sent '888888', correct '901778')
+
+--- ROUND 53: 351415 (noise=5.0% scale=±5% rot=±5°) ---
+  GrokSovietBot        | time:   1016.8ms | WRONG (sent '044481', correct '351415')
+  mimo_bot             | time:   1016.9ms | WRONG (sent '181800', correct '351415')
+  claude_bot           | time:   1016.9ms | WRONG (sent '000000', correct '351415')
+  gemini_bot           | time:   1016.9ms | WRONG (sent '888888', correct '351415')
+
+--- ROUND 54: 882940 (noise=5.0% scale=±5% rot=±5°) ---
+  GrokSovietBot        | time:    998.5ms | WRONG (sent '042444', correct '882940')
+  mimo_bot             | time:    998.5ms | WRONG (sent '418800', correct '882940')
+  claude_bot           | time:    998.6ms | WRONG (sent '000000', correct '882940')
+  gemini_bot           | time:    998.6ms | WRONG (sent '888888', correct '882940')
+
+--- ROUND 55: 371423 (noise=5.0% scale=±5% rot=±5°) ---
+  GrokSovietBot        | time:   1111.8ms | WRONG (sent '011494', correct '371423')
+  mimo_bot             | time:   1111.9ms | WRONG (sent '401800', correct '371423')
+  claude_bot           | time:   1111.9ms | WRONG (sent '000000', correct '371423')
+  gemini_bot           | time:   1111.9ms | WRONG (sent '888888', correct '371423')
+
+--- ROUND 56: 986490 (noise=5.0% scale=±6% rot=±6°) ---
+  GrokSovietBot        | time:   1003.7ms | WRONG (sent '946444', correct '986490')
+  mimo_bot             | time:   1003.7ms | WRONG (sent '118840', correct '986490')
+  claude_bot           | time:   1003.8ms | WRONG (sent '000000', correct '986490')
+  gemini_bot           | time:   1003.8ms | WRONG (sent '888888', correct '986490')
+
+--- ROUND 57: 597427 (noise=5.0% scale=±6% rot=±6°) ---
+  GrokSovietBot        | time:   1145.3ms | WRONG (sent '597527', correct '597427')
+  mimo_bot             | time:   1145.4ms | WRONG (sent '011890', correct '597427')
+  claude_bot           | time:   1145.4ms | WRONG (sent '000000', correct '597427')
+  gemini_bot           | time:   1145.4ms | WRONG (sent '888888', correct '597427')
+
+--- ROUND 58: 064634 (noise=5.0% scale=±6% rot=±6°) ---
+  GrokSovietBot        | time:    861.6ms | WRONG (sent '000000', correct '064634')
+  mimo_bot             | time:    861.6ms | WRONG (sent '118804', correct '064634')
+  claude_bot           | time:    861.6ms | WRONG (sent '000000', correct '064634')
+  gemini_bot           | time:    861.7ms | WRONG (sent '888888', correct '064634')
+
+--- ROUND 59: 641261 (noise=5.0% scale=±6% rot=±6°) ---
+  GrokSovietBot        | time:    949.3ms | WRONG (sent '000000', correct '641261')
+  mimo_bot             | time:    949.3ms | WRONG (sent '441814', correct '641261')
+  claude_bot           | time:    949.3ms | WRONG (sent '000000', correct '641261')
+  gemini_bot           | time:    949.4ms | WRONG (sent '888888', correct '641261')
+
+--- ROUND 60: 724577 (noise=5.0% scale=±6% rot=±6°) ---
+  GrokSovietBot        | time:    927.7ms | WRONG (sent '000000', correct '724577')
+  mimo_bot             | time:    927.8ms | WRONG (sent '011880', correct '724577')
+  claude_bot           | time:    927.8ms | WRONG (sent '000000', correct '724577')
+  gemini_bot           | time:    927.8ms | WRONG (sent '888888', correct '724577')
+
+--- ROUND 61: 697100 (noise=5.0% scale=±6% rot=±6°) ---
+  GrokSovietBot        | time:    722.8ms | WRONG (sent '000000', correct '697100')
+  mimo_bot             | time:    722.8ms | WRONG (sent '411800', correct '697100')
+  claude_bot           | time:    722.9ms | WRONG (sent '000000', correct '697100')
+  gemini_bot           | time:    722.9ms | WRONG (sent '888888', correct '697100')
+
+--- ROUND 62: 223315 (noise=5.0% scale=±6% rot=±6°) ---
+  GrokSovietBot        | time:   1076.5ms | WRONG (sent '226610', correct '223315')
+  mimo_bot             | time:   1076.5ms | WRONG (sent '408844', correct '223315')
+  claude_bot           | time:   1076.6ms | WRONG (sent '000000', correct '223315')
+  gemini_bot           | time:   1076.6ms | WRONG (sent '888888', correct '223315')
+
+--- ROUND 63: 009959 (noise=5.0% scale=±6% rot=±6°) ---
+  GrokSovietBot        | time:   1012.5ms | WRONG (sent '409940', correct '009959')
+  mimo_bot             | time:   1012.5ms | WRONG (sent '408810', correct '009959')
+  claude_bot           | time:   1012.5ms | WRONG (sent '000000', correct '009959')
+  gemini_bot           | time:   1012.6ms | WRONG (sent '888888', correct '009959')
+
+--- ROUND 64: 361788 (noise=5.0% scale=±6% rot=±6°) ---
+  GrokSovietBot        | time:    536.3ms | WRONG (sent '000000', correct '361788')
+  mimo_bot             | time:    536.4ms | WRONG (sent '108807', correct '361788')
+  claude_bot           | time:    536.4ms | WRONG (sent '000000', correct '361788')
+  gemini_bot           | time:    564.6ms | WRONG (sent '888888', correct '361788')
+
+--- ROUND 65: 264634 (noise=5.0% scale=±6% rot=±6°) ---
+  GrokSovietBot        | time:    797.0ms | WRONG (sent '000000', correct '264634')
+  mimo_bot             | time:    797.1ms | WRONG (sent '018880', correct '264634')
+  claude_bot           | time:    797.1ms | WRONG (sent '000000', correct '264634')
+  gemini_bot           | time:    797.1ms | WRONG (sent '888888', correct '264634')
+
+--- ROUND 66: 849643 (noise=5.0% scale=±7% rot=±7°) ---
+  GrokSovietBot        | time:    539.0ms | WRONG (sent '000000', correct '849643')
+  mimo_bot             | time:    539.0ms | WRONG (sent '401810', correct '849643')
+  claude_bot           | time:    539.0ms | WRONG (sent '000000', correct '849643')
+  gemini_bot           | time:    553.7ms | WRONG (sent '888888', correct '849643')
+
+--- ROUND 67: 897861 (noise=5.0% scale=±7% rot=±7°) ---
+  GrokSovietBot        | time:    898.0ms | WRONG (sent '000000', correct '897861')
+  mimo_bot             | time:    898.0ms | WRONG (sent '418884', correct '897861')
+  claude_bot           | time:    898.0ms | WRONG (sent '000000', correct '897861')
+  gemini_bot           | time:    898.0ms | WRONG (sent '888888', correct '897861')
+
+--- ROUND 68: 601858 (noise=5.0% scale=±7% rot=±7°) ---
+  GrokSovietBot        | time:    946.8ms | WRONG (sent '000000', correct '601858')
+  mimo_bot             | time:    946.9ms | WRONG (sent '101800', correct '601858')
+  claude_bot           | time:    946.9ms | WRONG (sent '000000', correct '601858')
+  gemini_bot           | time:    946.9ms | WRONG (sent '888888', correct '601858')
+
+--- ROUND 69: 618760 (noise=5.0% scale=±7% rot=±7°) ---
+  GrokSovietBot        | time:    550.4ms | WRONG (sent '000000', correct '618760')
+  mimo_bot             | time:    550.4ms | WRONG (sent '109817', correct '618760')
+  claude_bot           | time:    550.4ms | WRONG (sent '000000', correct '618760')
+  gemini_bot           | time:    631.7ms | WRONG (sent '888888', correct '618760')
+
+--- ROUND 70: 278606 (noise=5.0% scale=±7% rot=±7°) ---
+  GrokSovietBot        | time:   1093.1ms | WRONG (sent '666666', correct '278606')
+  mimo_bot             | time:   1093.2ms | WRONG (sent '111880', correct '278606')
+  claude_bot           | time:   1093.2ms | WRONG (sent '000000', correct '278606')
+  gemini_bot           | time:   1093.2ms | WRONG (sent '888888', correct '278606')
+
+--- ROUND 71: 241159 (noise=5.0% scale=±7% rot=±7°) ---
+  GrokSovietBot        | time:    739.0ms | WRONG (sent '000000', correct '241159')
+  mimo_bot             | time:    739.1ms | WRONG (sent '001860', correct '241159')
+  claude_bot           | time:    739.1ms | WRONG (sent '000000', correct '241159')
+  gemini_bot           | time:    739.1ms | WRONG (sent '888888', correct '241159')
+
+--- ROUND 72: 797563 (noise=5.0% scale=±7% rot=±7°) ---
+  GrokSovietBot        | time:   1007.8ms | WRONG (sent '747663', correct '797563')
+  mimo_bot             | time:   1007.9ms | WRONG (sent '411840', correct '797563')
+  claude_bot           | time:   1007.9ms | WRONG (sent '000000', correct '797563')
+  gemini_bot           | time:   1007.9ms | WRONG (sent '888888', correct '797563')
+
+--- ROUND 73: 412802 (noise=5.0% scale=±7% rot=±7°) ---
+  GrokSovietBot        | time:    904.4ms | WRONG (sent '000000', correct '412802')
+  mimo_bot             | time:    904.5ms | WRONG (sent '118804', correct '412802')
+  claude_bot           | time:    904.5ms | WRONG (sent '000000', correct '412802')
+  gemini_bot           | time:    904.5ms | WRONG (sent '888888', correct '412802')
+
+--- ROUND 74: 714367 (noise=5.0% scale=±7% rot=±7°) ---
+  GrokSovietBot        | time:    395.6ms | WRONG (sent '000000', correct '714367')
+  mimo_bot             | time:    395.6ms | WRONG (sent '448094', correct '714367')
+  claude_bot           | time:    395.7ms | WRONG (sent '000000', correct '714367')
+  gemini_bot           | time:    507.6ms | WRONG (sent '888888', correct '714367')
+
+--- ROUND 75: 080324 (noise=5.0% scale=±7% rot=±7°) ---
+  GrokSovietBot        | time:    771.5ms | WRONG (sent '000000', correct '080324')
+  mimo_bot             | time:    771.5ms | WRONG (sent '468840', correct '080324')
+  claude_bot           | time:    771.6ms | WRONG (sent '000000', correct '080324')
+  gemini_bot           | time:    771.6ms | WRONG (sent '888888', correct '080324')
+
+--- ROUND 76: 179533 (noise=5.0% scale=±8% rot=±8°) ---
+  GrokSovietBot        | time:    971.3ms | WRONG (sent '817963', correct '179533')
+  mimo_bot             | time:    971.4ms | WRONG (sent '401810', correct '179533')
+  claude_bot           | time:    971.4ms | WRONG (sent '000000', correct '179533')
+  gemini_bot           | time:    971.4ms | WRONG (sent '888888', correct '179533')
+
+--- ROUND 77: 178432 (noise=5.0% scale=±8% rot=±8°) ---
+  GrokSovietBot        | time:    935.6ms | WRONG (sent '000000', correct '178432')
+  mimo_bot             | time:    935.7ms | WRONG (sent '431880', correct '178432')
+  claude_bot           | time:    935.7ms | WRONG (sent '000000', correct '178432')
+  gemini_bot           | time:    935.7ms | WRONG (sent '888888', correct '178432')
+
+--- ROUND 78: 303382 (noise=5.0% scale=±8% rot=±8°) ---
+  GrokSovietBot        | time:   1007.6ms | CORRECT  +1 (total: 7)
+  mimo_bot             | time:   1007.7ms | WRONG (sent '411804', correct '303382')
+  claude_bot           | time:   1007.7ms | WRONG (sent '000000', correct '303382')
+  gemini_bot           | time:   1007.7ms | WRONG (sent '888888', correct '303382')
+
+--- ROUND 79: 312544 (noise=5.0% scale=±8% rot=±8°) ---
+  GrokSovietBot        | time:   1086.2ms | WRONG (sent '439414', correct '312544')
+  mimo_bot             | time:   1086.2ms | WRONG (sent '008800', correct '312544')
+  claude_bot           | time:   1086.2ms | WRONG (sent '000000', correct '312544')
+  gemini_bot           | time:   1086.2ms | WRONG (sent '888888', correct '312544')
+
+--- ROUND 80: 022620 (noise=5.0% scale=±8% rot=±8°) ---
+  GrokSovietBot        | time:   1072.9ms | CORRECT  +1 (total: 8)
+  mimo_bot             | time:   1073.0ms | WRONG (sent '188804', correct '022620')
+  claude_bot           | time:   1073.0ms | WRONG (sent '000000', correct '022620')
+  gemini_bot           | time:   1073.0ms | WRONG (sent '888888', correct '022620')
+
+--- ROUND 81: 165464 (noise=5.0% scale=±8% rot=±8°) ---
+  GrokSovietBot        | time:   1088.4ms | WRONG (sent '864411', correct '165464')
+  mimo_bot             | time:   1088.5ms | WRONG (sent '108814', correct '165464')
+  claude_bot           | time:   1088.5ms | WRONG (sent '000000', correct '165464')
+  gemini_bot           | time:   1088.5ms | WRONG (sent '888888', correct '165464')
+
+--- ROUND 82: 289095 (noise=5.0% scale=±8% rot=±8°) ---
+  GrokSovietBot        | time:    490.2ms | WRONG (sent '000000', correct '289095')
+  mimo_bot             | time:    490.2ms | WRONG (sent '101807', correct '289095')
+  claude_bot           | time:    490.2ms | WRONG (sent '000000', correct '289095')
+  gemini_bot           | time:    682.4ms | WRONG (sent '888888', correct '289095')
+
+--- ROUND 83: 606087 (noise=5.0% scale=±8% rot=±8°) ---
+  GrokSovietBot        | time:    486.5ms | WRONG (sent '000000', correct '606087')
+  mimo_bot             | time:    486.6ms | WRONG (sent '408894', correct '606087')
+  claude_bot           | time:    486.6ms | WRONG (sent '000000', correct '606087')
+  gemini_bot           | time:    666.9ms | WRONG (sent '888888', correct '606087')
+
+--- ROUND 84: 078550 (noise=5.0% scale=±8% rot=±8°) ---
+  GrokSovietBot        | time:    499.3ms | WRONG (sent '000000', correct '078550')
+  mimo_bot             | time:    499.3ms | WRONG (sent '401814', correct '078550')
+  claude_bot           | time:    499.3ms | WRONG (sent '000000', correct '078550')
+  gemini_bot           | time:    522.1ms | WRONG (sent '888888', correct '078550')
+
+--- ROUND 85: 260613 (noise=5.0% scale=±8% rot=±8°) ---
+  GrokSovietBot        | time:    876.1ms | WRONG (sent '000000', correct '260613')
+  mimo_bot             | time:    876.2ms | WRONG (sent '101800', correct '260613')
+  claude_bot           | time:    876.2ms | WRONG (sent '000000', correct '260613')
+  gemini_bot           | time:    876.2ms | WRONG (sent '888888', correct '260613')
+
+--- ROUND 86: 329629 (noise=5.0% scale=±9% rot=±9°) ---
+  GrokSovietBot        | time:   1126.3ms | WRONG (sent '244691', correct '329629')
+  mimo_bot             | time:   1126.3ms | WRONG (sent '108840', correct '329629')
+  claude_bot           | time:   1126.3ms | WRONG (sent '000000', correct '329629')
+  gemini_bot           | time:   1126.4ms | WRONG (sent '888888', correct '329629')
+
+--- ROUND 87: 002595 (noise=5.0% scale=±9% rot=±9°) ---
+  GrokSovietBot        | time:    442.7ms | WRONG (sent '000000', correct '002595')
+  mimo_bot             | time:    442.8ms | WRONG (sent '408890', correct '002595')
+  claude_bot           | time:    442.8ms | WRONG (sent '000000', correct '002595')
+  gemini_bot           | time:    603.6ms | WRONG (sent '888888', correct '002595')
+
+--- ROUND 88: 736135 (noise=5.0% scale=±9% rot=±9°) ---
+  GrokSovietBot        | time:    915.1ms | WRONG (sent '000000', correct '736135')
+  mimo_bot             | time:    915.2ms | WRONG (sent '111804', correct '736135')
+  claude_bot           | time:    915.2ms | WRONG (sent '000000', correct '736135')
+  gemini_bot           | time:    915.2ms | WRONG (sent '888888', correct '736135')
+
+--- ROUND 89: 365582 (noise=5.0% scale=±9% rot=±9°) ---
+  GrokSovietBot        | time:    521.6ms | WRONG (sent '000000', correct '365582')
+  mimo_bot             | time:    521.6ms | WRONG (sent '408804', correct '365582')
+  claude_bot           | time:    521.7ms | WRONG (sent '000000', correct '365582')
+  gemini_bot           | time:    700.0ms | WRONG (sent '888888', correct '365582')
+
+--- ROUND 90: 104454 (noise=5.0% scale=±9% rot=±9°) ---
+  GrokSovietBot        | time:    605.1ms | WRONG (sent '000000', correct '104454')
+  mimo_bot             | time:    605.1ms | WRONG (sent '438840', correct '104454')
+  claude_bot           | time:    605.1ms | WRONG (sent '000000', correct '104454')
+  gemini_bot           | time:    605.1ms | WRONG (sent '888888', correct '104454')
+
+--- ROUND 91: 827511 (noise=5.0% scale=±9% rot=±9°) ---
+  GrokSovietBot        | time:    856.3ms | WRONG (sent '000000', correct '827511')
+  mimo_bot             | time:    856.3ms | WRONG (sent '118640', correct '827511')
+  claude_bot           | time:    856.3ms | WRONG (sent '000000', correct '827511')
+  gemini_bot           | time:    856.3ms | WRONG (sent '888888', correct '827511')
+
+--- ROUND 92: 624334 (noise=5.0% scale=±9% rot=±9°) ---
+  GrokSovietBot        | time:   1024.1ms | WRONG (sent '614333', correct '624334')
+  mimo_bot             | time:   1024.2ms | WRONG (sent '401800', correct '624334')
+  claude_bot           | time:   1024.2ms | WRONG (sent '000000', correct '624334')
+  gemini_bot           | time:   1024.2ms | WRONG (sent '888888', correct '624334')
+
+--- ROUND 93: 553708 (noise=5.0% scale=±9% rot=±9°) ---
+  GrokSovietBot        | time:   1069.8ms | WRONG (sent '991110', correct '553708')
+  mimo_bot             | time:   1069.9ms | WRONG (sent '191810', correct '553708')
+  claude_bot           | time:   1069.9ms | WRONG (sent '000000', correct '553708')
+  gemini_bot           | time:   1069.9ms | WRONG (sent '888888', correct '553708')
+
+--- ROUND 94: 518887 (noise=5.0% scale=±9% rot=±9°) ---
+  GrokSovietBot        | time:    363.5ms | WRONG (sent '000000', correct '518887')
+  mimo_bot             | time:    363.5ms | WRONG (sent '119804', correct '518887')
+  claude_bot           | time:    363.6ms | WRONG (sent '000000', correct '518887')
+  gemini_bot           | time:    498.7ms | WRONG (sent '888888', correct '518887')
+
+--- ROUND 95: 603180 (noise=5.0% scale=±9% rot=±9°) ---
+  GrokSovietBot        | time:   1025.3ms | WRONG (sent '046140', correct '603180')
+  mimo_bot             | time:   1025.4ms | WRONG (sent '408880', correct '603180')
+  claude_bot           | time:   1025.4ms | WRONG (sent '000000', correct '603180')
+  gemini_bot           | time:   1025.4ms | WRONG (sent '888888', correct '603180')
+
+--- ROUND 96: 883964 (noise=5.0% scale=±10% rot=±10°) ---
+  GrokSovietBot        | time:   1086.4ms | WRONG (sent '043260', correct '883964')
+  mimo_bot             | time:   1086.5ms | WRONG (sent '101800', correct '883964')
+  claude_bot           | time:   1086.5ms | WRONG (sent '000000', correct '883964')
+  gemini_bot           | time:   1086.5ms | WRONG (sent '888888', correct '883964')
+
+--- ROUND 97: 728596 (noise=5.0% scale=±10% rot=±10°) ---
+  GrokSovietBot        | time:    439.2ms | WRONG (sent '000000', correct '728596')
+  mimo_bot             | time:    439.3ms | WRONG (sent '098800', correct '728596')
+  claude_bot           | time:    439.3ms | WRONG (sent '000000', correct '728596')
+  gemini_bot           | time:    598.9ms | WRONG (sent '888888', correct '728596')
+
+--- ROUND 98: 229588 (noise=5.0% scale=±10% rot=±10°) ---
+  GrokSovietBot        | time:    862.9ms | WRONG (sent '000000', correct '229588')
+  mimo_bot             | time:    863.0ms | WRONG (sent '419640', correct '229588')
+  claude_bot           | time:    863.0ms | WRONG (sent '000000', correct '229588')
+  gemini_bot           | time:    863.0ms | WRONG (sent '888888', correct '229588')
+
+--- ROUND 99: 335510 (noise=5.0% scale=±10% rot=±10°) ---
+  GrokSovietBot        | time:   1061.5ms | WRONG (sent '335540', correct '335510')
+  mimo_bot             | time:   1061.6ms | WRONG (sent '441810', correct '335510')
+  claude_bot           | time:   1061.6ms | WRONG (sent '000000', correct '335510')
+  gemini_bot           | time:   1061.6ms | WRONG (sent '888888', correct '335510')
+
+--- ROUND 100: 504428 (noise=5.0% scale=±10% rot=±10°) ---
+  GrokSovietBot        | time:    740.4ms | WRONG (sent '000000', correct '504428')
+  mimo_bot             | time:    740.4ms | WRONG (sent '408810', correct '504428')
+  claude_bot           | time:    740.4ms | WRONG (sent '000000', correct '504428')
+  gemini_bot           | time:    740.5ms | WRONG (sent '888888', correct '504428')
+
+
+============================================================
+FINAL TOURNAMENT RESULTS
+============================================================
+  #1  GrokSovietBot          8 points  active
+  #2  mimo_bot               0 points  active
+  #3  gpt54_bot              0 points  eliminated
+  #4  claude_bot             0 points  active
+  #5  gemini_bot             0 points  active
+  #6  nemotron_super         0 points  eliminated
