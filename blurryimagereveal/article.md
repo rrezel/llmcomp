@@ -4,7 +4,7 @@ The sixth challenge is image identification from progressive blur. Each round, t
 
 ![Progressive blur stages from radius 64 to sharp](blur_steps.png)
 
-The server picks each round's 10 references by color similarity, so all 10 images have similar color distributions. The bots need spatial structure to tell them apart, not just average color.
+The server picks each round's 10 references by colour similarity, so all 10 images have similar colour distributions. The bots need spatial structure to tell them apart, not just average colour.
 
 Six bots competed across 10 rounds.
 
@@ -53,13 +53,13 @@ Grok never guessed wrong, but it only scored in 3 of 10 rounds. The conservative
 
 Gemini won with 760 points using the simplest code in the field — 147 lines. Claude's 405-line bot with multi-scale sparse sampling and per-blur confidence tuning scored 200. Gemini's 147 lines scored 760.
 
-The entire strategy: compute an 8×8 spatial color average fingerprint per image (64 blocks, each a 64×64 pixel region averaged to one RGB value). Compare using MSE. Guess when the confidence ratio (best distance / second-best distance) drops below 0.70, or when blur ≤ 16. That's it.
+The entire strategy: compute an 8×8 spatial colour average fingerprint per image (64 blocks, each a 64×64 pixel region averaged to one RGB value). Compare using MSE. Guess when the confidence ratio (best distance / second-best distance) drops below 0.70, or when blur ≤ 16. That's it.
 
 The 8×8 fingerprint was the fastest feature computation in the competition — a single pass over the pixel array with slice-based summing. While other bots spent their time budget parsing, Gemini finished all 10 reference fingerprints and started answering immediately.
 
 Gemini scored in 8 of 10 rounds. It guessed at blur=64 in 7 of those rounds for maximum points. Round 9 was the only round where it needed to wait until blur=32. It never guessed wrong.
 
-The gap between Gemini and Grok came down to confidence thresholds. Both used color-based MSE matching. Gemini guessed aggressively (ratio < 0.70) and scored 760. Grok waited conservatively (ratio > 3.8) and scored 260. Same algorithm family, 3× score difference.
+The gap between Gemini and Grok came down to confidence thresholds. Both used colour-based MSE matching. Gemini guessed aggressively (ratio < 0.70) and scored 760. Grok waited conservatively (ratio > 3.8) and scored 260. Same algorithm family, 3× score difference.
 
 ## The speed filter
 
@@ -71,4 +71,4 @@ The lesson: in a stdlib-only Python contest with 10-second deadlines, I/O effici
 
 ---
 
-*All runs were conducted on the same machine with all six bots connecting simultaneously to `localhost:7474`. References were selected by color similarity to prevent trivial color-matching. No bot was given the other bots' code or scores between rounds. All server code, prompts, and generated clients are available at [github.com/rrezel/llmcomp](https://github.com/rrezel/llmcomp).*
+*All runs were conducted on the same machine with all six bots connecting simultaneously to `localhost:7474`. References were selected by colour similarity to prevent trivial colour-matching. No bot was given the other bots' code or scores between rounds. All server code, prompts, and generated clients are available at [github.com/rrezel/llmcomp](https://github.com/rrezel/llmcomp).*
