@@ -1,10 +1,10 @@
 # AI Coding Contest Day 6: Blurry Image Reveal. Gemini dominated.
 
-The sixth challenge is image identification from progressive blur. Each round, the server sends 10 reference images at full 512×512 resolution, then reveals a mystery image through 8 stages of decreasing Gaussian blur — from radius 64 (an unrecognizable smear) down to radius 0 (pixel-perfect). After each stage the bot can guess which reference is being revealed, or pass and wait for more clarity. Guess correctly early and score up to 100 points. Guess wrong and lose 10. All images are Wikimedia Commons Pictures of the Day.
+The sixth challenge is image identification from progressive blur. Each round, the server sends 10 reference images at full 512×512 resolution, then reveals a mystery image through 8 stages of decreasing Gaussian blur, from radius 64 (an unrecognizable smear) down to radius 0 (pixel-perfect). After each stage the bot can guess which reference is being revealed, or pass and wait for more clarity. Guess correctly early and score up to 100 points. Guess wrong and lose 10. All images are Wikimedia Commons Pictures of the Day.
 
 ![Progressive blur stages from radius 64 to sharp](blur_steps.png)
 
-The server picks each round's 10 references by colour similarity, so all 10 images have similar colour distributions. The bots need spatial structure to tell them apart, not just average colour.
+The server picks each round's 10 references by colour similarity, so all 10 images have similar colour distributions. Average colour won't help. The bots need spatial structure to tell them apart.
 
 Six bots competed across 10 rounds.
 
@@ -33,11 +33,11 @@ All three had matching strategies that might have worked. They just couldn't get
 
 ## Claude: Fast start, then collapsed
 
-Claude scored 200 points — 100 in each of the first two rounds, both at blur=64. Its approach: multi-scale sparse-sampled downscaling with SSD comparison and per-blur-level confidence thresholds. On paper, the most sophisticated bot in the field.
+Claude scored 200 points, 100 in each of the first two rounds, both at blur=64. Its approach: multi-scale sparse-sampled downscaling with SSD comparison and per-blur-level confidence thresholds.
 
-Then it timed out for the remaining 8 rounds. Claude's precomputation — sparse downscales at 5 resolutions for all 10 references — was on the edge of the 10-second deadline. In rounds 1 and 2 it finished in time (93ms and 0ms response times). In round 3 it processed all 8 blur steps but was never confident enough to guess. From round 4 onward, it consistently timed out at the first step.
+Then it timed out for the remaining 8 rounds. Claude's precomputation (sparse downscales at 5 resolutions for all 10 references) was on the edge of the 10-second deadline. In rounds 1 and 2 it finished in time (93ms and 0ms response times). In round 3 it processed all 8 blur steps but was never confident enough to guess. From round 4 onward, it consistently timed out at the first step.
 
-The likely cause: reference image sets vary in parsing complexity (whitespace patterns, token counts), and rounds 4+ happened to hit slower configurations. Claude's pipeline was right at the boundary — fast enough sometimes, too slow usually.
+The likely cause: reference image sets vary in parsing complexity (whitespace patterns, token counts), and rounds 4+ happened to hit slower configurations. Claude's pipeline was right at the boundary. Fast enough for 2 rounds, too slow for the other 8.
 
 ## Grok: Conservative scorer
 
@@ -55,7 +55,7 @@ Gemini won with 760 points using the simplest code in the field — 147 lines. C
 
 The entire strategy: compute an 8×8 spatial colour average fingerprint per image (64 blocks, each a 64×64 pixel region averaged to one RGB value). Compare using MSE. Guess when the confidence ratio (best distance / second-best distance) drops below 0.70, or when blur ≤ 16. That's it.
 
-The 8×8 fingerprint was the fastest feature computation in the competition — a single pass over the pixel array with slice-based summing. While other bots spent their time budget parsing, Gemini finished all 10 reference fingerprints and started answering immediately.
+The 8×8 fingerprint was the fastest feature computation in the competition. One pass over the pixel array with slice-based summing. While other bots spent their time budget parsing, Gemini finished all 10 reference fingerprints and started answering immediately.
 
 Gemini scored in 8 of 10 rounds. It guessed at blur=64 in 7 of those rounds for maximum points. Round 9 was the only round where it needed to wait until blur=32. It never guessed wrong.
 
@@ -65,9 +65,9 @@ The gap between Gemini and Grok came down to confidence thresholds. Both used co
 
 The challenge had a hidden qualifier: 30MB of ASCII data to parse before the first question. In a language with fast I/O, or with numpy, this is trivial. In pure Python with standard library only, it's the entire contest.
 
-Gemini survived because it kept parsing lean and feature computation fast. Grok survived because its downsampling was efficient enough. Claude was on the edge — fast enough for 2 rounds, then not. Three bots with more complex strategies never got past preparation.
+Gemini survived because it kept parsing lean and feature computation fast. Grok's downsampling was just efficient enough. Claude scraped by in 2 rounds before the deadline caught up. The other three never got past preparation.
 
-The lesson: in a stdlib-only Python contest with 10-second deadlines, I/O efficiency isn't a detail. It's the qualifying round.
+In a stdlib-only Python contest with 10-second deadlines, I/O efficiency is the qualifying round.
 
 ---
 
