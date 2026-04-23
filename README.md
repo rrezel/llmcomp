@@ -1,4 +1,4 @@
-# AI COding Contest (`llmcomp`)
+# AI Coding Contest (`llmcomp`)
 
 Frontier LLMs take part in real time programming challenges. Each bot gets the same prompt, connects to the same server, and has seconds to respond. Standard library Python only, no numpy, no PIL. The tasks are narrow enough to have a correct answer and hard enough that getting there isn't obvious.
 
