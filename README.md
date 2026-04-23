@@ -97,9 +97,9 @@ For more details on this test, see the [article](blurryimagereveal/article.md) a
 | **Claude (Opus 4.6)** | 4 | 0 | 1 | **13** |
 | **Gemini (Pro 3.1)** | 3 | 0 | 2 | **11** |
 | **ChatGPT (GPT 5.3)** | 3 | 1 | 1 | **10** |
-| **Nemotron** | 2 | 3 | 0 | **6** |
+| **Nemotron (3 Super)** | 2 | 3 | 0 | **6** |
 | **Grok (Expert 4.2)** | 0 | 4 | 1 | **1** |
-| **MiMo** | 0 | 4 | 1 | **1** |
+| **MiMo (V2-Pro)** | 0 | 4 | 1 | **1** |
 
 Top three all used minimax with alpha-beta pruning and iterative deepening. Grok and MiMo timed out repeatedly (69 combined timeouts) due to missing iterative deepening. Nemotron used win-or-block heuristic with random fallback — no search — but still beat the two bots that self-destructed.
 
@@ -137,9 +137,9 @@ For more details on this test, see the [article](ladenknightstour/article.md) an
 | **Claude (Opus 4.6 / 4.7)** | **6** | 0 | **1** |
 | **Gemini (Pro 3.1)** | **1** | **3** | **1** |
 | **Grok (Expert 4.2)** | **1** | **2** | 0 |
-| **MiMo** | 0 | **1** | **1** |
+| **MiMo (V2-Pro)** | 0 | **1** | **1** |
 | **ChatGPT (GPT 5.3)** | 0 | 0 | **1** |
-| **Nemotron** | 0 | 0 | **1** |
+| **Nemotron (3 Super)** | 0 | 0 | **1** |
 
 *Postcodes: Grok scored 8/100, all others scored 0 (no silver/bronze). Subway: Gemini and Nemotron tied on 6pts, Gemini took silver (2 round wins vs 0). Maze: Gemini, GPT, MiMo eliminated early (no medal). Blurry Image: GPT, MiMo, Nemotron timed out every round (no medal). Laden Knight's Tour: Grok, ChatGPT, Nemotron all timed out on most rounds (no medal). Claude used Opus 4.6 for challenges 1–7 and Opus 4.7 for challenge 8.*
 
