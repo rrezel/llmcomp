@@ -1,0 +1,1 @@
+/home/rrezel/llmcomp/wordgempuzzle/dictionary.txt
