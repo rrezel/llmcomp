@@ -69,7 +69,7 @@ Looking at Kimi's per-round times specifically:
 
 Two outliers (R1 = 0.85 s cold start, R4 = 0.83 s) and **eight rounds in the 50–70 ms range**. The next-best bot's *minimum* round time is 0.05 s (ChatGPT and Grok each had a single fast round), but their averages sit around 1.1–1.3 s. Kimi's win is 5× faster on the round-by-round average and 15–20× faster in steady state.
 
-That kind of speed gap is multiplicative, not additive. It's not a Nagle batching issue or a `setsockopt` decoration. It's the algorithm.
+That kind of speed gap is multiplicative, not additive: too large to explain by socket tuning alone. The dominant difference has to be solver shape and inner-loop cost.
 
 ## Kimi: a single-pass DP
 
@@ -107,7 +107,7 @@ For each starting position `p` (working from the end of the bitstream backward),
 
 Three other implementation choices fall out of that:
 
-- **Length-≥4 cutoff at trie-construction time.** Kimi excludes any dictionary word with fewer than 4 letters before inserting it into the trie (`if not word or len(word) < 4: continue`). Words shorter than 4 letters score zero or negative under the `letters − 3` formula. There is no game-theoretic reason to include them. Adding a short word to a packing only ever takes bit-space away from longer words. Other bots include all 370K words and rely on the DP to ignore zero-and-negative-weight intervals; that's correct, but the inner trie-walk visits more terminal nodes per scan position than it needs to.
+- **Length-≥4 cutoff at trie-construction time.** Kimi excludes any dictionary word with fewer than 4 letters before inserting it into the trie (`if not word or len(word) < 4: continue`). Words shorter than 4 letters score zero or negative under the `letters − 3` formula. There is no game-theoretic reason to include them. Adding a short word to a packing only ever takes bit-space away from longer words. Several other bots (Gemini, Claude, ChatGPT, Grok, MiMo, Muse) apply the same cutoff. The cutoff alone isn't Kimi's edge; the edge is the cutoff combined with the fused backward DP and a very tight inner loop. Nemotron is the only bot in the playing field with no length cutoff, and it carries the cost on every scan; DeepSeek uses a weaker `≥3` cutoff that admits zero-weight intervals into the trie.
 - **Bit-array conversion at the start of each round.** `bit_arr = [0 if c == '0' else 1 for c in bits]` runs once on the bitstream. Inside the inner loop, `if b[q]:` is an int truthiness check; the alternative (`if bitstream[q] == '1':` with a string) is materially slower in CPython because each access allocates a single-character string and runs a comparison.
 - **Local variable shadowing of the trie arrays.** `ch0_local = ch0; ch1_local = ch1; bl = best_len; bw = best_word; b = bit_arr` rebinds the function-scope names so the inner loop reads them from local-variable slots rather than chasing closures or attribute lookups. This is a pure CPython optimization, but in a 5-million-iteration loop on a 20K-bit stream, it matters.
 
@@ -117,7 +117,7 @@ With those four choices, Kimi's per-round time stays at 50–70 ms on 8 of 10 ro
 
 Five bots in the 1.0–1.3 s range, all running the standard two-phase solver. Within the cluster the per-round ordering is largely a function of inner-loop tightness and per-round Python variance: GC pauses, allocator behavior, byte-code warmup. Across 10 rounds the variance integrates out into a points spread of 23–42:
 
-- **ChatGPT (avg 1.08 s)**: a class-based recursive trie with a `score` field per node. Single-best round of 0.05 s won round 4; otherwise consistent 0.5–1.4 s.
+- **ChatGPT (avg 1.08 s)**: compact binary trie (class with `next0`/`next1`/`score`/`word` arrays), excludes any word of length ≤ 3, and on encoding collisions keeps the highest-scoring word at each terminal (alphabetical tiebreak). Strong solver design; the speed gap to Kimi is purely the two-phase scan/DP split, not a missing optimization. Single-best round of 0.05 s won round 4; otherwise consistent 0.5–1.4 s.
 - **Claude (avg 1.20 s)**: explicit `candidates_by_end` list pre-allocated for the bitstream length, plus dp/take arrays. Three top-3 placements but no firsts; banks 35 points on consistency.
 - **Grok (avg 1.28 s)**: 0.09 s round-1 first place accounts for 10 of its 32 points; the rest tail up to 2.5 s.
 - **Gemini (avg 1.12 s)**: array-based trie much like Kimi's, but two-phase scan + DP. Most consistent round-to-round (range 0.57–1.83) with no fast outlier round.
@@ -141,7 +141,7 @@ The bug is in the trie. DeepSeek stores a single `word` per node:
 trie = [(0, 0, None, 0)]  # (child0, child1, word, weight)
 ```
 
-When a second dictionary word's encoding ends at the same trie node, the second insertion overwrites the first. (This happens because the encoding is not prefix-free: for example, `c` and `ba` both encode to `10`, so any word that begins with `c` shares a trie node with words that begin with `ba`.) Whichever word DeepSeek inserts *last* at that node is the only one its solver can submit. The DP then has fewer candidate intervals to choose from, and the optimal packing it finds is a packing over an impoverished set. The structural ceiling lands right around 75% of the true optimum, which matches the scores observed on every round.
+When a second dictionary word's encoding ends at the same trie node, the second insertion overwrites the first. The encoding is not prefix-free, so distinct multi-letter words can produce identical bit strings: for example, the bit string `0110` is both `a + b + c` (= `abc`) and `a + d + a` (= `ada`), and any word ending in `abc` shares a terminal trie node with the equivalent word ending in `ada`. ChatGPT and Kimi handle this by keeping the highest-scoring word at each terminal node; DeepSeek just stores whichever entry was inserted last. **The interval geometry is the same** as the other bots; DeepSeek's scan finds the same set of bit-positions where some valid word ends. What's different is the (word, weight) stored at each terminal: when the last-write-wins overwrite landed on a shorter colliding word, DeepSeek's DP optimizes over a lower weight at that interval than it should. The aggregate effect across thousands of terminal nodes per round is a structural ceiling near 75% of the true optimum, which matches the scores observed on every round.
 
 This is a real algorithmic difference, not a speed difference. It earns DeepSeek a unique 9th place. On a field where everyone else converges on the maximum, DeepSeek alone is at a lower number.
 
